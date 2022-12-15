@@ -1,0 +1,40 @@
+{
+  "S4HanaOnPrem": {
+    "Destination": {
+      "PurchaseOrder": {
+        "destinationName": "tfe-s4hana-onprem-destination",
+        "accessToken": true,
+        "url": "/sap/opu/odata/sap/API_PURCHASEORDER_PROCESS_SRV/A_PurchaseOrder",
+        "actionUrl": "/sap/opu/odata/IWPGW/TASKPROCESSING;mo;v=2/Decision?sap-client=100&SAP__Origin='LOCAL_TGW'",
+        "searchFields": ["PurchaseOrder", "CompanyCode", "Supplier"],
+        "updateFields": [
+          "PurchasingGroup",
+          "PurchasingOrganization",
+          "PurchasingProcessingStatus",
+          "AddressName",
+          "AddressPhoneNumber"
+        ]
+      },
+      "PurchaseOrderItem": {
+        "destinationName": "tfe-s4hana-onprem-destination",
+        "accessToken": true,
+        "url": "/sap/opu/odata/sap/API_PURCHASEORDER_PROCESS_SRV/A_PurchaseOrderItem",
+        "suffix": "to_PurchaseOrderItem",
+        "searchFields": ["PurchaseOrderItem"],
+        "valueHelp": {
+          "url": "/sap/opu/odata/sap/MM_PUR_PO_MAINT_V2_SRV",
+          "mapping": [
+            {
+              "field": "TaxCode",
+              "uri": "/C_MM_TaxCodeValueHelp?$format=json"
+            },
+            {
+              "field": "TaxJurisdiction",
+              "uri": "/C_MM_TaxJurisdictionVH?$format=json"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

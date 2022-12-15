@@ -1,0 +1,35 @@
+{
+  "pageType": "Object",
+  "system": "S4HanaOnPrem",
+  "interface": "Destination",
+  "businessObject": "PurchaseOrder/PurchaseOrderItem",
+  "title": "Purchase Order Item",
+  "components": [
+    {
+      "type": "PropertyGrid",
+      "properties": [
+        {
+          "content": "Purchase Order ID",
+          "key": "PurchaseOrderItem"
+        },
+        {
+          "content": "Purchase Order Item Category",
+          "key": "PurchaseOrderItemCategory"
+        },
+        {
+          "content": "Purchase Order Item Text",
+          "key": "PurchaseOrderItemText"
+        },
+        {
+          "content": "Storage Location",
+          "key": "StorageLocation"
+        },
+        {
+          "content": "Tax Jurisdiction",
+          "key": "TaxJurisdiction",
+          "inputType": "Dropdown"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "BusinessObjectName": "PO",
+  "fields": {
+    "ReceiverEmailList": "USER_EMAIL",
+    "ObjectId": "PO_ID",
+    "ActionId": "TASK_ID",
+    "Description": "DESCRIPTION",
+    "CreatedBy": "CREATED_BY",
+    "Others": { "Creation Date": "CREATED_ON", "Priority": "PRIORITY" }
+  },
+  "DetailScreenConfig": "/frontend/simpleConfig/S4HanaOnPrem/Destination/PurchaseOrder.json"
+}
