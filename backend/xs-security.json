@@ -1,0 +1,51 @@
+{
+  "xsappname": "bridge-framework-backend",
+  "tenant-mode": "shared",
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.Display",
+      "description": "display"
+    }
+  ],
+  "role-templates": [
+    {
+      "name": "Viewer",
+      "description": "Required to read data",
+      "scope-references": ["$XSAPPNAME.Display"],
+      "attribute-references": [
+        "givenname",
+        "surname",
+        "emailaddress",
+        "name",
+        "country"
+      ]
+    }
+  ],
+  "attributes": [
+    {
+      "name": "givenname",
+      "description": "Given name",
+      "valueType": "string"
+    },
+    {
+      "name": "surname",
+      "description": "Last name",
+      "valueType": "string"
+    },
+    {
+      "name": "emailaddress",
+      "description": "Email address",
+      "valueType": "string"
+    },
+    {
+      "name": "name",
+      "description": "User name",
+      "valueType": "string"
+    },
+    {
+      "name": "country",
+      "description": "Country",
+      "valueType": "string"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+---
+applications:
+  - name: bridge-framework-backend
+    memory: 512M
+    disk_quota: 512M
+    buildpack: nodejs_buildpack
+    command: npm start
+    services:
+      - bridge-framework-destination
+      - bridge-framework-connectivity
+      - bridge-framework-xsuaa
+      - bridge-framework-app-logger

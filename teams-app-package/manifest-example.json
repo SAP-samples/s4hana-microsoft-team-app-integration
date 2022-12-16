@@ -1,0 +1,77 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.11/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.11",
+  "version": "{{APP_VERSION}}",
+  "id": "{{APPLICATION_ID}}",
+  "packageName": "{{PACKAGE_NAME}}",
+  "name": {
+    "short": "SAPTeams",
+    "full": "MS Teams Integration with SAP Systems"
+  },
+  "developer": {
+    "name": "SAP",
+    "mpnId": "",
+    "websiteUrl": "https://{{PUBLIC_HOSTNAME}}",
+    "privacyUrl": "https://{{PUBLIC_HOSTNAME}}",
+    "termsOfUseUrl": "https://{{PUBLIC_HOSTNAME}}"
+  },
+  "description": {
+    "short": "MS Teams Integration with SAP Systems",
+    "full": "MS Teams Integration with SAP Systems"
+  },
+  "icons": { "outline": "icon-outline.png", "color": "icon-color.png" },
+  "accentColor": "#FFFFFF",
+  "configurableTabs": [
+    {
+      "configurationUrl": "https://{{NGROK_SUBDOMAIN}}/config",
+      "canUpdateConfiguration": true,
+      "scopes": ["groupchat"],
+      "context": [
+        "meetingChatTab",
+        "meetingDetailsTab",
+        "meetingSidePanel",
+        "meetingStage"
+      ]
+    }
+  ],
+  "staticTabs": [
+    {
+      "entityId": "{{APPLICATION_ID}}",
+      "name": "Ticket",
+      "contentUrl": "https://{{NGROK_SUBDOMAIN}}/tab",
+      "websiteUrl": "https://{{NGROK_SUBDOMAIN}}/tab",
+      "scopes": ["personal"]
+    },
+    { "entityId": "about", "scopes": ["personal"] }
+  ],
+  "composeExtensions": [
+    {
+      "botId": "{{APPLICATION_ID}}",
+      "commands": [
+        {
+          "id": "webView",
+          "description": "Fetch the Web View",
+          "title": "Web View",
+          "type": "action",
+          "fetchTask": true,
+          "context": ["compose"]
+        }
+      ]
+    }
+  ],
+  "bots": [
+    {
+      "botId": "{{APPLICATION_ID}}",
+      "needsChannelSelector": false,
+      "isNotificationOnly": false,
+      "scopes": ["team", "personal", "groupchat"]
+    }
+  ],
+  "connectors": [],
+  "permissions": ["identity", "messageTeamMembers"],
+  "validDomains": [
+    "{{NGROK_SUBDOMAIN}}",
+    "{{PUBLIC_HOSTNAME}}",
+    "{{NGROK_URL}}"
+  ]
+}

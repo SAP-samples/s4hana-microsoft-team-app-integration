@@ -1,0 +1,8 @@
+---
+applications:
+  - name: bridge-framework-frontend
+    memory: 64M
+    disk_quota: 64M
+    path: build
+    buildpacks:
+      - staticfile_buildpack

@@ -1,0 +1,89 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.8",
+  "version": "8.0.0",
+  "id": "ac3a626a-2a56-43c0-ae04-eda2c989d715",
+  "packageName": "com.sap.teams.chat.export",
+  "developer": {
+    "name": "SAP",
+    "websiteUrl": "https://www.sap.com",
+    "privacyUrl": "https://www.sap.com",
+    "termsOfUseUrl": "https://www.sap.com"
+  },
+  "icons": {
+    "color": "icon-color.png",
+    "outline": "icon-outline.png"
+  },
+  "name": {
+    "short": "Bridge Framework",
+    "full": "Bridge Framework"
+  },
+  "description": {
+    "short": "Simplify SAP integrations with MS Teams.",
+    "full": "Simplify SAP integrations with MS Teams, using a configurable way to build integrations."
+  },
+  "accentColor": "#019CE0",
+  "bots": [
+    {
+      "botId": "ac3a626a-2a56-43c0-ae04-eda2c989d715",
+      "scopes": ["team", "personal", "groupchat"],
+      "isNotificationOnly": true,
+      "supportsFiles": true
+    }
+  ],
+  "composeExtensions": [
+    {
+      "botId": "ac3a626a-2a56-43c0-ae04-eda2c989d715",
+      "canUpdateConfiguration": false,
+      "commands": [
+        {
+          "id": "showDialog",
+          "type": "action",
+          "title": "Launch Bridge",
+          "description": "Launch Bridge Framework",
+          "initialRun": false,
+          "fetchTask": true,
+          "context": ["commandBox", "compose", "message"],
+          "parameters": [
+            {
+              "name": "param",
+              "title": "param",
+              "description": ""
+            }
+          ]
+        }
+      ],
+      "messageHandlers": [
+        {
+          "type": "link",
+          "value": {
+            "domains": [
+              "*.botframework.com",
+              "*.ngrok.io",
+              "*.hana.ondemand.com",
+              "*.cfapps.us20.hana.ondemand.com",
+              "*.cfapps.us10.hana.ondemand.com",
+              "*.cfapps.eu10.hana.ondemand.com"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "permissions": ["identity", "messageTeamMembers"],
+  "validDomains": [
+    "*.githubusercontent.com",
+    "*.ngrok.io",
+    "*.botframework.com",
+    "*.fusebit.io",
+    "*.hana.ondemand.com",
+    "*.cfapps.us20.hana.ondemand.com",
+    "*.cfapps.us10.hana.ondemand.com",
+    "*.cfapps.eu10.hana.ondemand.com"
+  ],
+  "webApplicationInfo": {
+    "id": "ac3a626a-2a56-43c0-ae04-eda2c989d715",
+    "resource": "api://bridge-framework-frontend.cfapps.us20.hana.ondemand.com/botid-ac3a626a-2a56-43c0-ae04-eda2c989d715",
+    "applicationPermissions": ["OnlineMeeting.ReadBasic.Chat"]
+  }
+}

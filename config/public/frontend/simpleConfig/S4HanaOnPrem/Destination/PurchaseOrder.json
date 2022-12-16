@@ -1,0 +1,86 @@
+{
+  "pageType": "Object",
+  "system": "S4HanaOnPrem",
+  "interface": "Destination",
+  "businessObject": "PurchaseOrder",
+  "CreationDate": "CreationDate",
+  "LastChangeDateTime": "LastChangeDateTime",
+  "PurchasingProcessingStatus": "PurchasingProcessingStatus",
+  "title": "Purchase Order",
+  "components": [
+    {
+      "type": "PropertyGrid",
+      "properties": [
+        {
+          "content": "Purchase Order ID",
+          "key": "PurchaseOrder"
+        },
+        {
+          "content": "Purchase Order Type",
+          "key": "PurchaseOrderType"
+        },
+        {
+          "content": "Purchasing Processing Status",
+          "key": "PurchasingProcessingStatus"
+        },
+        {
+          "content": "Created By User",
+          "key": "CreatedByUser"
+        },
+        {
+          "content": "Creation Date",
+          "key": "CreationDate"
+        },
+        {
+          "content": "Supplier",
+          "key": "Supplier"
+        },
+        {
+          "content": "Net Payment Days",
+          "key": "NetPaymentDays"
+        },
+        {
+          "content": "Purchasing Group",
+          "key": "PurchasingGroup",
+          "inputType": "TextInput"
+        },
+        {
+          "content": "Address Name",
+          "key": "AddressName",
+          "inputType": "TextInput"
+        },
+        {
+          "content": "Address Phone Number",
+          "key": "AddressPhoneNumber",
+          "inputType": "TextInput"
+        }
+      ]
+    },
+    {
+      "type": "Table",
+      "title": "Purchase Order Items",
+      "interactive": true,
+      "system": "S4HanaOnPrem",
+      "interface": "Destination",
+      "businessObject": "PurchaseOrder/PurchaseOrderItem",
+      "columns": [
+        {
+          "content": "Item Number",
+          "key": "PurchaseOrderItem"
+        },
+        {
+          "content": "Item Text",
+          "key": "PurchaseOrderItemText"
+        },
+        {
+          "content": "Currency",
+          "key": "DocumentCurrency"
+        },
+        {
+          "content": "Net Price Amount",
+          "key": "NetPriceAmount"
+        }
+      ]
+    }
+  ]
+}

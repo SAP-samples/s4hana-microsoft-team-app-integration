@@ -1,0 +1,24 @@
+{
+  "name": "ms-teams-backend",
+  "version": "1.0.0",
+  "dependencies": {
+    "@microsoft/microsoft-graph-client": "^3.0.2",
+    "@sap-cloud-sdk/core": "^1.54.1",
+    "axios": "^0.26.0",
+    "botbuilder": "^4.15.0",
+    "botbuilder-azure-blobs": "^4.15.0",
+    "cf-nodejs-logging-support": "^6.13.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.2",
+    "isomorphic-fetch": "^3.0.0",
+    "node-cache": "^5.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "~2.0.4"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "live": "nodemon app.js"
+  }
+}

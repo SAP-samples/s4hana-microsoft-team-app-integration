@@ -1,0 +1,12 @@
+{
+  "id": "landingPageConfig",
+  "path": "/",
+  "solutions": [
+    {
+      "key": 1,
+      "header": "Purchase Orders",
+      "description": "S4HanaOnPrem Destination",
+      "path": "/S4HanaOnPrem/Destination/PurchaseOrderTable"
+    }
+  ]
+}
