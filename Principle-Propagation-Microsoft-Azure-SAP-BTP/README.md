@@ -1,6 +1,6 @@
-# Principle Propagation Between SAP BTP and Microsoft Azure
+# Principal Propagation Between SAP BTP and Microsoft Azure
 
-In this section, we will focus on set up the principle propagation between Microsoft Azure and SAP Business Technology Platform (BTP).
+In this section, we will focus on set up the principal propagation between Microsoft Azure and SAP Business Technology Platform (BTP).
 
 ### Establish the Trust Between SAP BTP and Microsoft Azure
 1. Go to your SAP BTP subaccount and download the **SAML Metadata** under **Security** > **Trust Configuration**. 
