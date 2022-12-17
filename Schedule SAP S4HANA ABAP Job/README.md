@@ -25,7 +25,7 @@ In this section we will configure an RFC Destination and point to the SAP BTP Ev
     
     ![tempsnip](https://user-images.githubusercontent.com/29527722/207473304-232dd4a2-ebcd-41df-8d2d-16d6c9225050.png)
 
-3. Go to the **Technical Settings** tab. In the **Technical Settings** section, give the value of **Host** as the value of **uri** we obtained [section 1](https://github.com/I561660/btp-bridge-framework/edit/patch-1/mission/S4H-ABAP-Job/README.md#1-obtain-the-sap-event-mesh-oauth-client-credentials--message-queue-rest-endpoint) step 2 (**without the https://**). Enter **443** as the value of port. 
+3. Go to the **Technical Settings** tab. In the **Technical Settings** section, give the value of **Host** as the value of **uri** we obtained [section 1](https://github.com/SAP-samples/s4hana-microsoft-team-app-integration/tree/mission/Schedule%20SAP%20S4HANA%20ABAP%20Job#1-obtain-the-sap-event-mesh-oauth-client-credentials--message-queue-rest-endpoint) step 2 (**without the https://**). Enter **443** as the value of port. 
 
     ![tempsnip](https://user-images.githubusercontent.com/29527722/207474742-5c3868f5-49fd-4ed4-af29-ab710a3cb959.png)
     
@@ -50,15 +50,15 @@ In this section we will configure the OAuth Client and OAuth Profile in the SAP 
     
     - OAuth 2.0 Client Profile: /IWXBE/MGW_MQTT
     - Configuration Name:       Meaningful name
-    - Oauth 2.0 Client ID:      **clientid** we obtained from [section 1](https://github.com/I561660/btp-bridge-framework/edit/patch-1/mission/S4H-ABAP-Job/README.md#1-obtain-the-sap-event-mesh-oauth-client-credentials--message-queue-rest-endpoint) step 2. 
+    - Oauth 2.0 Client ID:      **clientid** we obtained from [section 1](https://github.com/SAP-samples/s4hana-microsoft-team-app-integration/tree/mission/Schedule%20SAP%20S4HANA%20ABAP%20Job#1-obtain-the-sap-event-mesh-oauth-client-credentials--message-queue-rest-endpoint) step 2. 
     
     ![tempsnip](https://user-images.githubusercontent.com/29527722/207478420-d12c5c12-5f9e-44ce-994e-5776be84e3b7.png)
 
 3. Scroll down to the **Details** tab. Follow the instruction below to complet the setup.
 
-    - **Client Secret**: **clientsecret** we obtained from [section 1](https://github.com/I561660/btp-bridge-framework/edit/patch-1/mission/S4H-ABAP-Job/README.md#1-obtain-the-sap-event-mesh-oauth-client-credentials--message-queue-rest-endpoint) step 2.
-    - **Authorization Endpoint**: **tokenendpoint** we obtained from [section 1](https://github.com/I561660/btp-bridge-framework/edit/patch-1/mission/S4H-ABAP-Job/README.md#1-obtain-the-sap-event-mesh-oauth-client-credentials--message-queue-rest-endpoint) step 2. **Replace /token to /authorize** 
-    - **Token Endpoint**: **tokenendpoint** we obtained from [section 1](https://github.com/I561660/btp-bridge-framework/edit/patch-1/mission/S4H-ABAP-Job/README.md#1-obtain-the-sap-event-mesh-oauth-client-credentials--message-queue-rest-endpoint) step 2.
+    - **Client Secret**: **clientsecret** we obtained from [section 1](https://github.com/SAP-samples/s4hana-microsoft-team-app-integration/tree/mission/Schedule%20SAP%20S4HANA%20ABAP%20Job#1-obtain-the-sap-event-mesh-oauth-client-credentials--message-queue-rest-endpoint) step 2.
+    - **Authorization Endpoint**: **tokenendpoint** we obtained from [section 1](https://github.com/SAP-samples/s4hana-microsoft-team-app-integration/tree/mission/Schedule%20SAP%20S4HANA%20ABAP%20Job#1-obtain-the-sap-event-mesh-oauth-client-credentials--message-queue-rest-endpoint) step 2. **Replace /token to /authorize** 
+    - **Token Endpoint**: **tokenendpoint** we obtained from [section 1](https://github.com/SAP-samples/s4hana-microsoft-team-app-integration/tree/mission/Schedule%20SAP%20S4HANA%20ABAP%20Job#1-obtain-the-sap-event-mesh-oauth-client-credentials--message-queue-rest-endpoint) step 2.
     - Scroll down to the **Access Settings** section and check the **Form Fields**, **Header Field** and **Client Credentials** option.
     
     ![tempsnip](https://user-images.githubusercontent.com/29527722/207480086-c8f70e13-0606-4a9b-b74a-42543a231260.png)
