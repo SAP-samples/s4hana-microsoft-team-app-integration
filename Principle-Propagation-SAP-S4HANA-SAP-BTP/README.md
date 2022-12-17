@@ -1,6 +1,6 @@
-# Principle Propagation Between SAP BTP and SAP S/4HANA On-Premise
+# Principal Propagation Between SAP BTP and SAP S/4HANA On-Premise
 
-In this section, we will focusing on set up the principle propagation between SAP Bussiness Technology Platform and SAP S/4HANA On-Premise system.
+In this section, we will focusing on set up the principal propagation between SAP Bussiness Technology Platform and SAP S/4HANA On-Premise system.
 
 ## Establish trust between SAP BTP and SAP S/4HANA on-premise system 
 
