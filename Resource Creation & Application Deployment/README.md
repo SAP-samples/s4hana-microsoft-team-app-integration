@@ -54,5 +54,40 @@ In this section, we will focus on using the automation tool to finish the resour
     
     ![tempsnip](https://user-images.githubusercontent.com/29527722/208512357-a89f0d72-7eb5-418e-b8d0-16b458734a21.png)
 
+## 2. Download the Automation Tool Docker Image
+
+1. Download the automation tool docker image **bridge-automation-pipeline.tar.gz** from the [GitHub release](https://github.wdf.sap.corp/I568982/bridge-framework-automation/releases/tag/v1.0.1-alpha)
     
+2. Open the CMD tool in your local machine, go into the directory where the downloaded docker image stored.
     
+    ![tempsnip](https://user-images.githubusercontent.com/29527722/208526292-4389f31b-0c2d-4b9b-afff-65c3fd40e737.png)
+
+3. Issue the command command below to load the docker image in your local machine.
+    
+    - **docker load -i ./bridge-automation-pipeline.tar.gz**
+    
+    ![tempsnip](https://user-images.githubusercontent.com/29527722/208526799-f44d4757-84a1-4e98-a833-06c81067d565.png)
+
+4. Issue the command below to start the docker container and run the image inside of the container. After the execution, you will see an container ID returned in the terminal.
+    
+    - **docker container run -e BTPSA_VERSION_GIT="\$(git describe --long --tags  --always)" --rm  -it -d --name bridge-automation-pipeline bridge-automation-pipeline** 
+
+    ![Capture](https://user-images.githubusercontent.com/29527722/208529877-d69c415d-5477-4e54-9807-8b1fe891ee35.PNG)
+    
+## 3. Update the Automation Tool Configuration File 
+
+1. Open the **Visual Studio Code** (VSC) IDE, click **Ctrl+Shift+P** to open the **Command Palette**. Choose the **Dev Container: Attach to Running Container...** in the dropdown menu. 
+    
+    > **Note**
+    > - Please **install** the **VSC extensions** listing below before open the Command Palette
+    > - **Dev Containers**
+    > - **Remote Development**
+    
+    ![tempsnip](https://user-images.githubusercontent.com/29527722/208532399-6645cd4e-24c0-416e-87cc-f2cb89bd70b4.png)
+    ![tempsnip](https://user-images.githubusercontent.com/29527722/208533691-8f1463a5-65ca-4ca8-acfc-cf9a4ae4391a.png)
+
+2. Select the running container **bridge-automation-pipeline** in the drop down menu.
+    
+    ![Capture](https://user-images.githubusercontent.com/29527722/208536304-2b7c50c3-aee5-4217-819f-5358e10bb0e0.PNG)
+    
+3. We should inside of the bridge framework automation tool container which is up-and-running in our local machine. Lets update the configuration file of the container so that it could help us create the resource on SAP BTP and Microsof Azure, and deploy the extension application in SAP BTP.
