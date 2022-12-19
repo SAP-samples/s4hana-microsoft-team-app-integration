@@ -91,3 +91,11 @@ In this section, we will focus on using the automation tool to finish the resour
     ![Capture](https://user-images.githubusercontent.com/29527722/208536304-2b7c50c3-aee5-4217-819f-5358e10bb0e0.PNG)
     
 3. We should inside of the bridge framework automation tool container which is up-and-running in our local machine. Lets update the configuration file of the container so that it could help us create the resource on SAP BTP and Microsof Azure, and deploy the extension application in SAP BTP.
+
+4. Expend the **btp-bridge-framework -> config -> public** folder, **delete the existing backedn and frontend folder**. **Drag** and **drop** the following folders we got from this [step](https://flpnwc-ad17b8dc3.dispatcher.hana.ondemand.com/sites/admincenter#projectboard-Display&/masterboard/4164/card/9356957) under the **public** folder in the container.
+    
+    -  **backend**
+    -  **frontend**
+    -  **notification**
+    
+    ![tempsnip](https://user-images.githubusercontent.com/29527722/208549375-3a3fcb46-7df9-48b8-aefb-455bad300835.png)
