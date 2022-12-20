@@ -99,8 +99,12 @@ In this section, we will focus on using the automation tool to finish the resour
     -  **notification**
     
     ![tempsnip](https://user-images.githubusercontent.com/29527722/208549375-3a3fcb46-7df9-48b8-aefb-455bad300835.png)
+    
+5. Open the manifest.yaml file under the root directory in the container. Please follow the instructions below to update the file.
+    
+    - Change applications.name at line 3 from ms-teams-us10-backend-automation-test to a meaningful name. 
 
-5. Open the **parameters.json** file under the root directory in the container. This file is used to hold the data of your SAP BTP Subaccount and Microsoft Azure subscription. The automation tool will use the value you give in this file to create resources on SAP BTP and Microsoft Azure, and deploy your extension application on SAP BTP. 
+6. Open the **parameters.json** file under the root directory in the container. This file is used to hold the data of your SAP BTP Subaccount and Microsoft Azure subscription. The automation tool will use the value you give in this file to create resources on SAP BTP and Microsoft Azure, and deploy your extension application on SAP BTP. 
 
     **Please follow the instruction below to update the variable's value in this file**.
     
