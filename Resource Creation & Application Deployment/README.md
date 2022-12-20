@@ -99,3 +99,29 @@ In this section, we will focus on using the automation tool to finish the resour
     -  **notification**
     
     ![tempsnip](https://user-images.githubusercontent.com/29527722/208549375-3a3fcb46-7df9-48b8-aefb-455bad300835.png)
+
+5. Open the **parameters.json** file under the root directory in the container. This file is used to hold the data of your SAP BTP Subaccount and Microsoft Azure subscription. The automation tool will use the value you give in this file to create resources on SAP BTP and Microsoft Azure, and deploy your extension application on SAP BTP. 
+
+    **Please follow the instruction below to update the variable's value in this file**.
+    
+    - ### You could find the value for the variable listing below on the SAP BTP subaccount Overview Page
+    - **region**: the SAP BTP Subaccount region.
+    - **globalaccount** : the SAP BTP global account name.
+    - **subaccountid**: Subaccount ID shows on your SAP BTP subaccount Overview page.
+    - **subaccountname**: Subdomain name shows on your SAP BTP subaccount Overview page
+    - **orgid**: Org ID shows on your SAP BTP subaccount Overview page.
+    - **org**: Org Name shows on your SAP BTP subaccount Overview page.
+    - **cfcliapihostregion**: This value is part of API Endpoint. SOmethinkg like US20/US10
+    - **cfspacename**: The space name we just created.
+    - **myemail**: The email address you used to create the configured the SAP BTP Subaccount.
+    
+    ![tempsnip](https://user-images.githubusercontent.com/29527722/208554531-d287d165-1706-40b0-98ad-b0a6387c0d39.png)
+    
+    - **messagingEndpoint**:
+    - **providerScopeBaseUrl**:
+    - **msteamsWebClientId**:
+    - **msteamsSPId**:
+    - **allPreConfiguredSAPAppsId**:
+    - **replyUrlsPrefixes**:
+    - **identifierUrisPrefixes**:
+    - **tokenExchangeUrlPrefix**:
