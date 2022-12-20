@@ -128,10 +128,43 @@ In this section, we will focus on using the automation tool to finish the resour
     
     - **messagingEndpoint**: replace ms-teams-us10-backend-automation-test with the value you gave in the step 5.a, replace us10 to the cfcliapihostregion value you gave.
     - **providerScopeBaseUrl**: repleace ms-teams-us10-frontend-automation-test with the value you gave in the previous step 5.d, replace us10 to the cfcliapihostregion value you gave. 
-    - sapPlatformObjId
-    - **msteamsWebClientId**: 
-    - **msteamsSPId**:
-    - **allPreConfiguredSAPAppsId**:
-    - **replyUrlsPrefixes**:
-    - **identifierUrisPrefixes**:
-    - **tokenExchangeUrlPrefix**:
+    - **sapPlatformObjId**: the Microsoft Azure enterprise application object ID. You could find this value under App Registration -> Your Enterprise Application -> Overview page.
+    - **replyUrlsPrefixes**: copy and paste the value of providerScopeBaseUrl, replace api:// with https://
+    - **identifierUrisPrefixes**: copy and paste the value of providerScopeBaseUrl
+    - **tokenExchangeUrlPrefix**: copy and paste the value of providerScopeBaseUrl
+    
+    ![tempsnip](https://user-images.githubusercontent.com/29527722/208737058-aa342c59-d13f-4730-ad57-2226c1a2cf8a.png)
+    
+    - **pythonvars.app_names.backend**: the value you gave in the previous step 5.a
+    - **pythonvars.app_names.config**: the value you gave in the previous step 5.c
+    - **pythonvars.app_names.frontend**: the value you gave in the previous step 5.d
+    - **pythonvars.envCreation.subscription_name**: this is the event mesh webhook name, you could give any meaningful name
+    - **pythonvars.envCreation.endpoint**: this is the bridge framework backend api endpoint which will responsilbe for receive and process the message send by event mesh webhook. Replace ms-teams-us10-backend-automation-test with the value you gave in prevsiou step 5.a. Replace us10 with the cfcliapihostregion's value.
+    - **pythonvars.envCreation.queue_name**: this value will apply to the message queue in the event mesh. You could give any ready friendly name.
+    - **pythonvars.envCreation.sap_graph_instance_name**: delete this line.
+    * **pythonvars.envCreation.saml_alias**:
+      *  If you subaccount is hosted on AWS: (subaccountname).aws-live
+      *  If you subaccont is hosted on Azure: (subaccountname).azure-(cfcliapihostregion)
+    
+    ![tempsnip](https://user-images.githubusercontent.com/29527722/208741846-a97989dc-6231-4fe4-b9c2-26743a2baa32.png)
+
+7. Open the **default.json** file under the **usecases -> released** folder. Follow the instructions below to update this file.
+    
+    * Update line 16 instance name with the value you give in manifest.yaml line 13
+      
+      ![tempsnip](https://user-images.githubusercontent.com/29527722/208743037-d81f4ef7-e27a-4038-816e-3dc286d08094.png)
+      ![tempsnip](https://user-images.githubusercontent.com/29527722/208743263-46f5d19c-5782-4c9e-ac8a-09c20c9e2a5d.png)
+      
+    * Update line 23 instance name with the value you give in manifest.yaml at line 12.
+    * Update line 43 instance name with the value you give in manifest.yaml at line 10.
+    * Update line 51 instance name with the value you give in manifest.yaml at line 11.
+    * Delete line 53 ~ line 60.
+    * Update line 58 instance name with a meaningful name. 
+    * Update line 61 emname with a meaningful name.
+    * Update line 62 namespace with a meaningful name.
+    
+    ![tempsnip](https://user-images.githubusercontent.com/29527722/208746148-d90228cc-8299-4211-879f-8a3ebd1fb48f.png)
+
+## 4. Trigger the Automation Tool Container
+
+As we already provided the SAP BTP subaccount and Microsoft Azure metadata within the automation tool configuration file, now it's time for us to run the automation tool container and let it create the resources on SAP BTP and Microsoft Azure for us, and deploy the extension application for us.
