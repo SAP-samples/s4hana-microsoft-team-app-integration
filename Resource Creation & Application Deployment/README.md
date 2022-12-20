@@ -165,6 +165,31 @@ In this section, we will focus on using the automation tool to finish the resour
     
     ![tempsnip](https://user-images.githubusercontent.com/29527722/208746148-d90228cc-8299-4211-879f-8a3ebd1fb48f.png)
 
-## 4. Trigger the Automation Tool Container
+## 4. Trigger the Automation Tool Docker Container
 
 As we already provided the SAP BTP subaccount and Microsoft Azure metadata within the automation tool configuration file, now it's time for us to run the automation tool container and let it create the resources on SAP BTP and Microsoft Azure for us, and deploy the extension application for us.
+
+1. Open a new terminal in the VSC, and execute the command "./btpsa" under the root directory in the container.
+    
+    ![tempsnip](https://user-images.githubusercontent.com/29527722/208748406-32eb7599-770e-49e2-aa0a-d902fdefcfc8.png)
+
+2. There will be a link shows up in the terminal and asks you to do the manual login. Copy this link and open it in a browser, and click Procedd and log in button in the pop-up page in the browser.
+    
+    ![tempsnip](https://user-images.githubusercontent.com/29527722/208748732-760a94a4-d4cf-4a1a-b2d5-8eb5fff5bb9f.png)
+    ![tempsnip](https://user-images.githubusercontent.com/29527722/208748964-90546496-274b-485d-ac36-75f22e40a052.png)
+
+3. After a while you will see there is another manual login request shows up in the terminal. Copy the authentication code and then open the URL in the browser to finish the manual login process.
+    
+    ![xx](https://user-images.githubusercontent.com/29527722/208751511-90c4b136-72fa-4216-9dfe-30c7c8471ecd.png)
+    ![Capture2](https://user-images.githubusercontent.com/29527722/208751607-f6b7184a-fc47-41f9-add5-acece1c5f37e.PNG)
+    ![Capture3](https://user-images.githubusercontent.com/29527722/208751742-523f1b7e-289d-4562-9abb-1296508e0a31.PNG)
+
+4. Sometime you will be asking again to do the manual login with the Microsoft Azure. Copy the newly generated authentication code and URL into the browser, and finish the second time manual Azure login.
+    
+    ![Capture4](https://user-images.githubusercontent.com/29527722/208752435-2bb2c0b7-5093-4584-b478-1967ad1c92e7.PNG)
+    ![Capture5](https://user-images.githubusercontent.com/29527722/208752453-581b0c39-ec04-4b04-a55a-a1e104a18618.PNG)
+    ![Capture3](https://user-images.githubusercontent.com/29527722/208751742-523f1b7e-289d-4562-9abb-1296508e0a31.PNG)
+
+
+    
+    
