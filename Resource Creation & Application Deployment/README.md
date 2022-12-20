@@ -126,9 +126,10 @@ In this section, we will focus on using the automation tool to finish the resour
     
     ![tempsnip](https://user-images.githubusercontent.com/29527722/208554531-d287d165-1706-40b0-98ad-b0a6387c0d39.png)
     
-    - **messagingEndpoint**:
-    - **providerScopeBaseUrl**:
-    - **msteamsWebClientId**:
+    - **messagingEndpoint**: replace ms-teams-us10-backend-automation-test with the value you gave in the step 5.a, replace us10 to the cfcliapihostregion value you gave.
+    - **providerScopeBaseUrl**: repleace ms-teams-us10-frontend-automation-test with the value you gave in the previous step 5.d, replace us10 to the cfcliapihostregion value you gave. 
+    - sapPlatformObjId
+    - **msteamsWebClientId**: 
     - **msteamsSPId**:
     - **allPreConfiguredSAPAppsId**:
     - **replyUrlsPrefixes**:
