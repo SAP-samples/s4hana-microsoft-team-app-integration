@@ -190,6 +190,15 @@ As we already provided the SAP BTP subaccount and Microsoft Azure metadata withi
     ![Capture5](https://user-images.githubusercontent.com/29527722/208752453-581b0c39-ec04-4b04-a55a-a1e104a18618.PNG)
     ![Capture3](https://user-images.githubusercontent.com/29527722/208751742-523f1b7e-289d-4562-9abb-1296508e0a31.PNG)
 
-5. After a while you will be asked to do provide the SAP BTP subaccount credential in the terminal. Please enter the your BTP subaccount CF API endpoint, Email, Password in the ternimal, and then click the subaccount and target space which will be used as a host of your extension application.
+5. Once the Microsoft Azure resource creation is done, the SAP BTP service instances creation and extension application deployment on SAP BTP side will begin. You will be asked to do provide the **SAP BTP subaccount credential** in the terminal. Please enter the your **BTP subaccount CF API endpoint**, **Email**, and **Password** in the ternimal, and then select the **subaccount** and **target space** which will be used as a host of your extension application.
+    
+    ![tempsnip](https://user-images.githubusercontent.com/29527722/208992547-97725af7-b77e-470a-9037-129c828f5ec2.png)
+    
+6. Since the CF CLI will not hold your login credentials for a long time, so you will be asked again to provide your SAP BTP credentials like what we did in step 5. Please keep an eye on the terminal and process it timely. 
+    
+    ![tempsnip](https://user-images.githubusercontent.com/29527722/208993594-a8ea5402-cdf7-40d3-804e-ec6b98b2c653.png)
+
+7. Finally in your terminal you will see **SUCCESSFULLY FINISHED USE CASE EXECUTION**. This mean that all the resources creation and extension application deployment has been done successfully.  
+
     
     
