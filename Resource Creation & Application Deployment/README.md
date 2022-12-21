@@ -200,5 +200,6 @@ As we already provided the SAP BTP subaccount and Microsoft Azure metadata withi
 
 7. Finally in your terminal you will see **SUCCESSFULLY FINISHED USE CASE EXECUTION**. This mean that all the resources creation and extension application deployment has been done successfully.  
 
-    
+    ![tempsnip](https://user-images.githubusercontent.com/29527722/208994218-2fa7ab65-cd45-41ed-9614-9f7edbcbc0a6.png)
+
     
