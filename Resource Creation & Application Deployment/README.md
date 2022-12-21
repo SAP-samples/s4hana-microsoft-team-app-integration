@@ -178,18 +178,18 @@ As we already provided the SAP BTP subaccount and Microsoft Azure metadata withi
     ![tempsnip](https://user-images.githubusercontent.com/29527722/208748732-760a94a4-d4cf-4a1a-b2d5-8eb5fff5bb9f.png)
     ![tempsnip](https://user-images.githubusercontent.com/29527722/208748964-90546496-274b-485d-ac36-75f22e40a052.png)
 
-3. After a while you will see there is another manual login request shows up in the terminal. Copy the authentication code and then open the URL in the browser to finish the manual login process.
+3. After a while you will see there is a manual login request shows up in the terminal. This step is for Microsoft Azure Powershall authentication. Copy the authentication code and then open the URL in the browser to finish the manual Azure login.
     
     ![xx](https://user-images.githubusercontent.com/29527722/208751511-90c4b136-72fa-4216-9dfe-30c7c8471ecd.png)
     ![Capture2](https://user-images.githubusercontent.com/29527722/208751607-f6b7184a-fc47-41f9-add5-acece1c5f37e.PNG)
     ![Capture3](https://user-images.githubusercontent.com/29527722/208751742-523f1b7e-289d-4562-9abb-1296508e0a31.PNG)
 
-4. Sometime you will be asking again to do the manual login with the Microsoft Azure. Copy the newly generated authentication code and URL into the browser, and finish the second time manual Azure login.
+4. Then you will see another manual login request shows up in the terminal. This step is for Microsoft Azure CLI authentication. Copy the newly generated authentication code and URL into the browser, and finish the second time manual Azure login.
     
     ![Capture4](https://user-images.githubusercontent.com/29527722/208752435-2bb2c0b7-5093-4584-b478-1967ad1c92e7.PNG)
     ![Capture5](https://user-images.githubusercontent.com/29527722/208752453-581b0c39-ec04-4b04-a55a-a1e104a18618.PNG)
     ![Capture3](https://user-images.githubusercontent.com/29527722/208751742-523f1b7e-289d-4562-9abb-1296508e0a31.PNG)
 
-
+5. After a while you will be asked to do provide the SAP BTP subaccount credential in the terminal. Please enter the your BTP subaccount CF API endpoint, Email, Password in the ternimal, and then click the subaccount and target space which will be used as a host of your extension application.
     
     
