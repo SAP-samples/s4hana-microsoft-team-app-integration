@@ -93,4 +93,15 @@ In this section, we will focus on import & schedule the SAP S/4HANA ABAP backgro
     ![tempsnip](https://user-images.githubusercontent.com/29527722/207690987-48d3292c-4cc7-4e2f-a4a4-d03fad2675ae.png)
     
 4. Click the **Clone Online Repo** button, and then click **pull** button to import the ABAP job source code into your SAP S/4HANA On-Premises system.
+    
+    ![tempsnip](https://user-images.githubusercontent.com/29527722/209022505-9dc7f06c-5d30-458a-a753-6d4b6a678aae.png)
+
 ### 5. Modify the ABAP Job Source Code
+
+After you clone the ABAP backgroud job source code from the GitHub repo, we have to make several changes to let the ABAP backgroud job use the RFC Destination, OAuth Client, and OAuth profile we created in the previous section.
+
+1. Go back to the **ABAP Editor: Initial Screen** page. Enter **ZRP_SEND_PO_WF_DATA_TO_EM** in the Program search bar, select **Source Code** and click the **Display** button.
+    
+    ![tempsnip](https://user-images.githubusercontent.com/29527722/209023357-c9b67258-cd41-4dfe-9212-45edadde6a45.png)
+
+2. 
