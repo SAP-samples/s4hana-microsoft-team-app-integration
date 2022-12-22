@@ -138,3 +138,7 @@ After you clone the ABAP backgroud job source code from the GitHub repo, we have
 7. Click **Save** to save the changes and then click **Activate** button to active the changes.
 
 ### 6. Schedule the ABAB Backgroud Job
+
+Now we will schedule the ZRP_SEND_PO_WF_DATA_TO_EM ABAP report running in the backgroud opn every minute in the SAP S/4HANA system. This report will be serving as a backgroud job, read the purchase order approval workflow instance data and purchase order data from the SAP S/4HANA database, and send data to the message queue in the SAP Event Mesh service.
+
+1. Go back to you SAP S/4HANA system in the SAP GUI. Enter the transaction code SM36 to open the Schedule Backgroud Job app.
