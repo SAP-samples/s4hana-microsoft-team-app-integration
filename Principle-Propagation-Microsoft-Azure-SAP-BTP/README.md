@@ -49,6 +49,6 @@ In this section, we will focus on set up the principal propagation between Micro
 13. Give the trust configuration an appropriate Name and **disable Available for User Logon** option. Click on **Save**. (Link text for user logon could be same as origin key).  
 ![Picture14](https://user-images.githubusercontent.com/29527722/205148056-ec4f28f6-673c-495e-9ebb-4bf37b486a59.png)
 
-14. Go back to the **enterprise application** we just created on the Microsoft Azure, Click Users and Groups on the left menu bar, and then add the purchase order creator and purchase order approver user into the enterprise by click the Add user/group button.
+14. Go back to the **enterprise application** we just created on the **Microsoft Azure**, Click **Users and Groups** on the left menu bar, and then add the purchase order creator and purchase order approver user into the enterprise by click the **Add user/group** button.
 
-    
+    ![tempsnip](https://user-images.githubusercontent.com/29527722/209204711-499790e4-74f0-4531-9661-eb67823c28cc.png)
