@@ -104,4 +104,32 @@ After you clone the ABAP backgroud job source code from the GitHub repo, we have
     
     ![tempsnip](https://user-images.githubusercontent.com/29527722/209023357-c9b67258-cd41-4dfe-9212-45edadde6a45.png)
 
-2. 
+2. Double Click on the **ZRP_SEND_PO_WF_DATA_TO_EM( )** at **line 12** and then double click the **CONSTRUCTOR** method show up in the next page.
+    
+    ![tempsnip](https://user-images.githubusercontent.com/29527722/209026583-83510b11-eb28-4a66-a79e-1a1bd87903cd.png)
+    ![tempsnip](https://user-images.githubusercontent.com/29527722/209026677-a4733e11-bee9-44ac-824d-d8cebef1f20f.png)
+
+3. Click **Displat <-> Change** button on the the menu bar, and then follow the instructions below to update the constructor method. After that click **Save** button to save the changes.
+    
+    ![tempsnip](https://user-images.githubusercontent.com/29527722/209027137-2214bf32-9c83-40b7-99fa-a85a31fd532c.png)
+    
+    - **dest_name**: Change to the name of RFC destination we created in the step [2.2](https://github.com/SAP-samples/s4hana-microsoft-team-app-integration/tree/mission/Schedule%20SAP%20S4HANA%20ABAP%20Job#2-configure-an-rfc-destination-in-sap-s4hana-on-premises-system)
+    - **auth_profile**: Change to the name of OAuth profile we created in the step [3.2](https://github.com/SAP-samples/s4hana-microsoft-team-app-integration/tree/mission/Schedule%20SAP%20S4HANA%20ABAP%20Job#3-configure-the-oauth-client--oauth-profile-in-the-sap-s4hana-on-premises-system)
+    - **auth_conf**: Change to the name of OAuth Configuration we created in the step [3.2](https://github.com/SAP-samples/s4hana-microsoft-team-app-integration/tree/mission/Schedule%20SAP%20S4HANA%20ABAP%20Job#3-configure-the-oauth-client--oauth-profile-in-the-sap-s4hana-on-premises-system)
+    
+    ![tempsnip](https://user-images.githubusercontent.com/29527722/209027860-b9a11a46-9f5c-4121-b135-302304cad96e.png)
+
+4. Click **Activate** button to make the constructor method changes active.
+    
+    ![tempsnip](https://user-images.githubusercontent.com/29527722/209028234-a9df062f-70af-46d1-8288-54938433f4a3.png)
+    
+5. Back to the ZRP_SEND_PO_WF_DATA_TO_EM source code page, **double-click** on the **run_em_job** method at **line 12**, and then **double-click** on the **generate_em_rest_client** method on the **line 3**.
+    
+    ![tempsnip](https://user-images.githubusercontent.com/29527722/209028746-55bf8293-0066-453a-9cbd-df4f1c88b73f.png)
+    ![tempsnip](https://user-images.githubusercontent.com/29527722/209029249-0a971329-fc44-4c37-a4aa-6e86e19afdd7.png)
+
+6. Scroll down to the line 51, **replace message queue name sap%2Fem%2Fs4%2Fpurchase-order** to the one we defined in this section.
+    
+    > - Note
+    > - 
+    
