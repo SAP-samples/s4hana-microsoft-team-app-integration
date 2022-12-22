@@ -141,4 +141,51 @@ After you clone the ABAP backgroud job source code from the GitHub repo, we have
 
 Now we will schedule the ZRP_SEND_PO_WF_DATA_TO_EM ABAP report running in the backgroud opn every minute in the SAP S/4HANA system. This report will be serving as a backgroud job, read the purchase order approval workflow instance data and purchase order data from the SAP S/4HANA database, and send data to the message queue in the SAP Event Mesh service.
 
-1. Go back to you SAP S/4HANA system in the SAP GUI. Enter the transaction code SM36 to open the Schedule Backgroud Job app.
+1. Go back to you SAP S/4HANA system in the SAP GUI. Enter the transaction code **SM36** to open the **Schedule Backgroud Job** app. Click **Job wizard** button to setup a schedule of a new backgroud job.
+    
+    ![tempsnip](https://user-images.githubusercontent.com/29527722/209193359-b2c38f15-52bc-47d9-baab-712b03a180b0.png)
+
+2. In the **Create a job** pop-up window, click **Continue** button.
+    
+    ![tempsnip](https://user-images.githubusercontent.com/29527722/209194383-845462b1-00f2-4e12-a4fa-3b5e03b15b84.png)
+
+3. In the **General job information** page, enter **ZRP_SEND_PO_WF_DATA_TO_EM** as the **Job Name** or any read-friendly name you would like to use. Click **Continue**.
+    
+    ![tempsnip](https://user-images.githubusercontent.com/29527722/209194731-b8e0b28a-4d57-4f30-8b6a-3dd595c4bc35.png)
+    
+4. In the **Job definition: Job step** page, choose **ABAP program** step.
+    
+    ![tempsnip](https://user-images.githubusercontent.com/29527722/209199625-96e32421-5bf7-4fd6-8702-289c64470d71.png)
+
+5. Enter **ZRP_SEND_PO_WF_DATA_TO_EM** as the **ABAP Program Name**, and then click **Continue**.
+    
+    ![tempsnip](https://user-images.githubusercontent.com/29527722/209199895-da6b06b5-ca8c-4e9a-acfc-a42b7d23becf.png)
+
+6. Click **Continue** directly in the next two pages.
+    
+    ![tempsnip](https://user-images.githubusercontent.com/29527722/209200064-be9ae1d8-6a78-489f-a44a-007d479f6186.png)
+    ![tempsnip](https://user-images.githubusercontent.com/29527722/209200234-4ce17456-23da-4bd0-b8e3-9edf88514b27.png)
+
+7. In the **Job definition: Start Conditions** page, choose **Immediately** and then click **Continue**.
+    
+    ![tempsnip](https://user-images.githubusercontent.com/29527722/209200729-48bb5641-415c-4a71-8ee6-280ed4885d92.png)
+    
+8. In the **Def. of Start immediately** page, check **Period** checkbox, and then click Continue.
+    
+    ![tempsnip](https://user-images.githubusercontent.com/29527722/209201952-bf32c953-1edb-4807-bf48-e8f3edcc142e.png)
+
+9. In the **Period definition** page, check **None of the above** radio button and then click the **Other periods** button.
+    
+    ![tempsnip](https://user-images.githubusercontent.com/29527722/209202243-7b1bbd10-df44-42ba-aef5-794fc7b89951.png)
+    
+10. Enter **1 minute** in the **Other Period Definition** pop-up window, and then click **Create** button.
+    
+    ![tempsnip](https://user-images.githubusercontent.com/29527722/209202867-9deb2186-bda0-459f-b850-8193e7a1bc98.png)
+    
+11. In the **Set job** page, click **Complete** button to finish the ABAP backgroud job setup.
+    
+    ![tempsnip](https://user-images.githubusercontent.com/29527722/209203076-b574e5b6-d6d1-4922-8875-ec3e9ea107a0.png)
+
+
+
+
