@@ -2,7 +2,7 @@
 
 In this section, we will focusing on set up the principal propagation between SAP Bussiness Technology Platform and SAP S/4HANA On-Premise system.
 
-## Establish trust between SAP BTP and SAP S/4HANA on-premise system 
+## 1. Establish trust between SAP BTP and SAP S/4HANA on-premise system 
 
 1. Login to the **SAP S/4HANA On-Premise cloud connector administration console** and connect your BTP subaccount by clicking on the **Add Subaccount** button. Enter the details below and click on Save.
     
@@ -128,7 +128,7 @@ In this section, we will focusing on set up the principal propagation between SA
 
 
 
-## Create a destination on SAP BTP 
+## 2. Create a destination on SAP BTP 
 
 1. In the **SAP BTP subaccount**, go to **Connectivity > Cloud Connector** and verify that the Cloud Connector instance created in previous section is registered
 ![Picture44](https://user-images.githubusercontent.com/29527722/205173299-996b51a1-808c-48e4-b801-05064754a1e5.png)
