@@ -92,7 +92,7 @@ In this section, we will focus on using the automation tool to finish the resour
     
 3. We should inside of the bridge framework automation tool container which is up-and-running in our local machine. Lets update the configuration file of the container so that it could help us create the resource on SAP BTP and Microsof Azure, and deploy the extension application in SAP BTP.
 
-4. Expend the **btp-bridge-framework -> config -> public** folder, **delete the existing backedn and frontend folder**. **Drag** and **drop** the following folders we got from this [step](https://flpnwc-ad17b8dc3.dispatcher.hana.ondemand.com/sites/admincenter#projectboard-Display&/masterboard/4164/card/9356957) under the **public** folder in the container.
+4. Expend the **btp-bridge-framework -> config -> public** folder, **delete the existing backedn and frontend folder**. **Drag and drop** the following folders we got from this [step](https://flpnwc-ad17b8dc3.dispatcher.hana.ondemand.com/sites/admincenter#projectboard-Display&/masterboard/4164/card/9356957) under the **public** folder in the container.
     
     -  **backend**
     -  **frontend**
@@ -100,7 +100,12 @@ In this section, we will focus on using the automation tool to finish the resour
     
     ![tempsnip](https://user-images.githubusercontent.com/29527722/208549375-3a3fcb46-7df9-48b8-aefb-455bad300835.png)
     
-5. Open the **manifest.yaml** file under the root directory in the container. Please follow the instructions below to update the file.
+5. Open the **backend -> objectMappingConfig.json** we just dropped, update the **destinationName** value at **line 5** and **line 19** to the name of the destination we created during the **Principal Propagation Between SAP BTP and SAP S/4HANA On-Premise** step [section 2.2](https://github.com/SAP-samples/s4hana-microsoft-team-app-integration/blob/mission/Principle-Propagation-SAP-S4HANA-SAP-BTP/README.md#2-create-a-destination-on-sap-btp)
+
+    ![tempsnip](https://user-images.githubusercontent.com/29527722/209711360-df00e910-5b81-4c5a-93d1-b7caaa39dbb4.png)
+    ![tempsnip](https://user-images.githubusercontent.com/29527722/209711503-6937600c-f749-4191-a6bf-9c1ff71c19ac.png)
+
+6. Open the **manifest.yaml** file under the root directory in the container. Please follow the instructions below to update the file.
     
     - a. Change **applications.name** at line 3 **from** ms-teams-us10-backend-automation-test **to** a meaningful name. **Note this value down**.
     - b. Update ms-teams-us10 to a meaningful value from line 10 to line 13. **Note those value down**.
@@ -109,11 +114,10 @@ In this section, we will focus on using the automation tool to finish the resour
     
     ![Capture](https://user-images.githubusercontent.com/29527722/208556959-ccab0379-503a-4bb2-8743-55fe74dcc60b.PNG)
 
-6. Open the **parameters.json** file under the root directory in the container. This file is used to hold the data of your SAP BTP Subaccount and Microsoft Azure subscription. The automation tool will use the value you give in this file to create resources on SAP BTP and Microsoft Azure, and deploy your extension application on SAP BTP. 
+7. Open the **parameters.json** file under the root directory in the container. This file is used to hold the data of your SAP BTP Subaccount and Microsoft Azure subscription. **The automation tool will use the value you give in this file to create resources on SAP BTP and Microsoft Azure, and deploy your extension application on SAP BTP**. 
 
     **Please follow the instruction below to update the variable's value in this file**.
     
-    - ### You could find the value for the variable listing below on the SAP BTP subaccount Overview Page
     - **region**: the SAP BTP Subaccount region.
     - **globalaccount** : the SAP BTP global account name.
     - **subaccountid**: Subaccount ID shows on your SAP BTP subaccount Overview page.
@@ -126,8 +130,8 @@ In this section, we will focus on using the automation tool to finish the resour
     
     ![tempsnip](https://user-images.githubusercontent.com/29527722/208554531-d287d165-1706-40b0-98ad-b0a6387c0d39.png)
     
-    - **messagingEndpoint**: replace ms-teams-us10-backend-automation-test with the value you gave in the step 5.a, replace us10 to the cfcliapihostregion value you gave.
-    - **providerScopeBaseUrl**: repleace ms-teams-us10-frontend-automation-test with the value you gave in the previous step 5.d, replace us10 to the cfcliapihostregion value you gave. 
+    - **messagingEndpoint**: replace ms-teams-us10-backend-automation-test with the value you gave in the step 6.a, replace us10 to the cfcliapihostregion value you gave.
+    - **providerScopeBaseUrl**: repleace ms-teams-us10-frontend-automation-test with the value you gave in the previous step 6.d, replace us10 to the cfcliapihostregion value you gave. 
     - **sapPlatformObjId**: the Microsoft Azure enterprise application object ID. You could find this value under App Registration -> Your Enterprise Application -> Overview page.
     - **replyUrlsPrefixes**: copy and paste the value of providerScopeBaseUrl, replace api:// with https://
     - **identifierUrisPrefixes**: copy and paste the value of providerScopeBaseUrl
@@ -135,11 +139,11 @@ In this section, we will focus on using the automation tool to finish the resour
     
     ![tempsnip](https://user-images.githubusercontent.com/29527722/208737058-aa342c59-d13f-4730-ad57-2226c1a2cf8a.png)
     
-    - **pythonvars.app_names.backend**: the value you gave in the previous step 5.a
-    - **pythonvars.app_names.config**: the value you gave in the previous step 5.c
-    - **pythonvars.app_names.frontend**: the value you gave in the previous step 5.d
+    - **pythonvars.app_names.backend**: the value you gave in the previous step 6.a
+    - **pythonvars.app_names.config**: the value you gave in the previous step 6.c
+    - **pythonvars.app_names.frontend**: the value you gave in the previous step 6.d
     - **pythonvars.envCreation.subscription_name**: this is the event mesh webhook name, you could give any meaningful name
-    - **pythonvars.envCreation.endpoint**: this is the bridge framework backend api endpoint which will responsilbe for receive and process the message send by event mesh webhook. Replace ms-teams-us10-backend-automation-test with the value you gave in prevsiou step 5.a. Replace us10 with the cfcliapihostregion's value.
+    - **pythonvars.envCreation.endpoint**: this is the bridge framework backend api endpoint which will responsilbe for receive and process the message send by event mesh webhook. Replace ms-teams-us10-backend-automation-test with the value you gave in prevsiou step 6.a. Replace us10 with the cfcliapihostregion's value.
     - **pythonvars.envCreation.queue_name**: this value will apply to the message queue in the event mesh. You could give any ready friendly name.
     - **pythonvars.envCreation.sap_graph_instance_name**: delete this line.
     * **pythonvars.envCreation.saml_alias**:
@@ -148,7 +152,7 @@ In this section, we will focus on using the automation tool to finish the resour
     
     ![tempsnip](https://user-images.githubusercontent.com/29527722/208741846-a97989dc-6231-4fe4-b9c2-26743a2baa32.png)
 
-7. Open the **default.json** file under the **usecases -> released** folder. Follow the instructions below to update this file.
+8. Open the **default.json** file under the **usecases -> released** folder. Follow the instructions below to update this file.
     
     * Update line 16 instance name with the value you give in manifest.yaml line 13
       
