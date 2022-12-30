@@ -12,3 +12,4 @@ The SAP S/4HANA extension application will be generated automatically after the 
 
 ## 2. Install the Extension Application in Microsoft Teams
 
+1.Login to the Microsoft Teams app. Click Apps icon on the left menu bar.
