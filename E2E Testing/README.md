@@ -37,7 +37,7 @@ In this section, we will go through the use case of approve SAP S/4HANA purchase
     
     ![Capture](https://user-images.githubusercontent.com/29527722/210117388-25e2a548-eb8c-4d80-b8bd-da961cc1247b.PNG)
     
- 3. **Weikun** cloud **look the purchase order details** information by clicking the **View More Details** button in the notification card.
+ 3. **Weikun** could **look the purchase order details** information by clicking the **View More Details** button in the notification card.
      
      ![Capture](https://user-images.githubusercontent.com/29527722/210117449-63fc307a-f703-4600-9529-9eb8cea3bcf8.PNG)
      
