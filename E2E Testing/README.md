@@ -24,9 +24,9 @@ In this section, we will go through the use case of approve SAP S/4HANA purchase
 
 ## 2. End-to-End Flow
 
-1. **Alex** login to the SAP S/4HANA system and **created a new purchase order** with the **purchase order ID** as **4500001142**, and this purchase order is need purchase order approver Weikun's approval.
+1. **Alex** login to the SAP S/4HANA system and **created a new purchase order** with the **purchase order ID** as **4500001144**, and this purchase order is need purchase order approver Weikun's approval.
 
-    ![Capture](https://user-images.githubusercontent.com/29527722/210117193-298eb6f2-33cd-4955-801f-b99caa2eb1a7.PNG)
+    ![Capture](https://user-images.githubusercontent.com/29527722/210622494-00ccad6d-c156-42b6-85a5-e08f64d73b5d.PNG)
     
 2. **Weikun** as a purchase order approver **receives the notifcation card** in the Microsoft Teams. From the notifcation card he couold get the following brife information about the purchase order
     
@@ -35,19 +35,20 @@ In this section, we will go through the use case of approve SAP S/4HANA purchase
     - Purchase Order Creation Date
     - Priority of Purchase Order
     
-    ![Capture](https://user-images.githubusercontent.com/29527722/210117388-25e2a548-eb8c-4d80-b8bd-da961cc1247b.PNG)
+    ![tempsnip](https://user-images.githubusercontent.com/29527722/210622839-edb2d694-8445-4513-83ac-2972be5314a3.png)
     
  3. **Weikun** could **look the purchase order details** information by clicking the **View More Details** button in the notification card.
      
-     ![Capture](https://user-images.githubusercontent.com/29527722/210117449-63fc307a-f703-4600-9529-9eb8cea3bcf8.PNG)
+     ![Capture](https://user-images.githubusercontent.com/29527722/210623031-f1386e25-5ef6-4416-818f-06697c090159.PNG)
      
-     ![Capture](https://user-images.githubusercontent.com/29527722/210117467-c71ecebd-b973-4763-af19-1b9a49a21e55.PNG)
+     ![Capture](https://user-images.githubusercontent.com/29527722/210623217-484ef849-1216-4f7a-849e-66d86289dff8.PNG)
      
-     ![Capture](https://user-images.githubusercontent.com/29527722/210117483-c182d0c5-094e-4c53-97e4-e3082127401c.PNG)
+     ![Capture](https://user-images.githubusercontent.com/29527722/210623358-e3ee6afc-ea9a-42fe-9c1c-1115623442c6.PNG)
 
-4. If Weikun needs have an discussion with the purchase order creator Alex regarding the purchase order, then he could simply forward this notification card to Alex and start the conversation by clicking the **Discuss** button.
+4. If Weikun needs have an discussion with the purchase order creator Alex regarding the purchase order, then he could simply forward this notification card to Alex and start the conversation by clicking the **Discuss** button, and then start the conversation with purchase order creator Alex
     
-    ![Capture](https://user-images.githubusercontent.com/29527722/210117598-ea8da4ca-e8b5-4d96-bd9d-15a1cedba44f.PNG)
+    ![tempsnip](https://user-images.githubusercontent.com/29527722/210623602-620f5b89-f23b-4d8b-83a9-dd721b037f32.png)
 
+5. 
     
 
