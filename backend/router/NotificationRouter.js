@@ -73,6 +73,7 @@ notificationRouter.post("/notifyUser", async (req, res) => {
           // get all the required notification data
           // TODO: Error handling for required fields
           cardData[key] = req.body[notificationConfig.fields[key]];
+          cardData["origSysManagementAppURL"] = notificationConfig.origSysManagementAppURL;
         }
       }
 

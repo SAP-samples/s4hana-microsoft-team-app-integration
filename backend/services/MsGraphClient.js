@@ -8,6 +8,7 @@
 
 const { Client } = require("@microsoft/microsoft-graph-client");
 const axios = require("axios");
+const uuid = require("uuid");
 require("isomorphic-fetch");
 
 class MsGraphClient {
@@ -137,7 +138,7 @@ class MsGraphClient {
     const newUrl = new URL(url);
     const params = new URLSearchParams(newUrl.search);
 
-    const boUrl = process.env.businessObjectUrl;
+    const boUrl = objData.origSysManagementAppURL.replace('objectId', boId.toString());
     params.append("viewMoreDetails", true);
     newUrl.search = params.toString();
 
@@ -195,7 +196,7 @@ class MsGraphClient {
       ],
     };
 
-    const adaptiveCardId = process.env.adaptiveCardId;
+    const adaptiveCardId = uuid.v4();
     const chatMessage = {
       subject: null,
       body: {
