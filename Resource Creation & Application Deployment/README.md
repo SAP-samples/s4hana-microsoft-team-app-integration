@@ -42,9 +42,9 @@ In this section, we will focus on using the Bridge Framework automation pipeline
     
     - For **MacOS** users
       - MacOs with **Intel Chip** 
-        - [Bridge Framework Automation Pipeline Docker Image](https://github.wdf.sap.corp/SCE/sap-mission-s4-hana-purchase-order-approval/releases/tag/v1.0.0-beta)
-      - MacOs with **M1 Chip**
         - [Bridge Framework Automation Pipeline Docker Image](https://github.wdf.sap.corp/SCE/sap-mission-s4-hana-purchase-order-approval/releases/tag/v1.0.0-alpha)
+      - MacOs with **M1 Chip**
+        - [Bridge Framework Automation Pipeline Docker Image](https://github.wdf.sap.corp/SCE/sap-mission-s4-hana-purchase-order-approval/releases/tag/v1.0.0-beta)
     - For **WindowsOS** users
       - [Bridge Framework Automation Pipeline Docker Image](https://github.wdf.sap.corp/SCE/sap-mission-s4-hana-purchase-order-approval/releases/tag/v1.0.0-alpha)
     
