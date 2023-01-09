@@ -48,11 +48,11 @@ In this section, we will focus on using the Bridge Framework automation pipeline
     - For **WindowsOS** users
       - [Bridge Framework Automation Pipeline Docker Image](https://github.wdf.sap.corp/SCE/sap-mission-s4-hana-purchase-order-approval/releases/tag/v1.0.0-alpha)
     
-2. Open the CMD tool in your local machine, go into the directory where the downloaded docker image stored.
+2. Open the CMD tool in your local machine, go into the directory where the downloaded Bridge Framework automation pipeline docker image stored.
     
     ![tempsnip](https://user-images.githubusercontent.com/29527722/208526292-4389f31b-0c2d-4b9b-afff-65c3fd40e737.png)
 
-3. Issue the command command below to load the docker image in your local machine.
+3. Issue the command command below to load the Bridge Framework automation pipeline docker image in your local machine.
     
     - **docker load -i ./bridge-automation-pipeline.tar.gz**
     
@@ -64,7 +64,7 @@ In this section, we will focus on using the Bridge Framework automation pipeline
 
     ![Capture](https://user-images.githubusercontent.com/29527722/208529877-d69c415d-5477-4e54-9807-8b1fe891ee35.PNG)
     
-## 3. Update the Automation Tool Configuration File 
+## 3. Update the Bridge Framework Automation Pipeline Docker container Configuration FileS 
 
 1. Open the **Visual Studio Code** (VSC) IDE, click **Ctrl+Shift+P** to open the **Command Palette**. Choose the **Dev Container: Attach to Running Container...** in the dropdown menu. 
     
