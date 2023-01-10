@@ -93,8 +93,25 @@ In this section, we will focus on using the Bridge Framework automation pipeline
 5. **Open** the **notificationConfig.json** file under the directory **btp-bridge-framework -> config -> public -> notification**. At line No.12 update the **s4hana-onprem-internal-host-ip**:**port** to your **SAP S/4HANA On-Premise system internal server ip** and **port number**. Save the changes.
 
     ![tempsnip](https://github.wdf.sap.corp/storage/user/105079/files/a5eaacb5-b3f4-460e-901e-e413cc68be8d)
+    
+6. Open the **default.json** file under the **directory usecases -> released -> default.json**. This files contains the information which the Bridge Framework automation pipeline will used to configure the SAP BTP Service instances needed by the Bridge Framework. We needs to **update some configurations** for the **SAP BTP Destination service instance**, and the **SAP Event Mesh service instance**.
+    
+    - For the **SAP BTP Destination service instance configuration**, **updates** the **http://s4hanaonprem:44300** at **line No.53** to the **virtual host name** and **virtual host port** you defined in the SAP S/4HANA Cloud Connector. You could find your SAP S/4HANA Cloud Connector virtual host and virtual port information on the SAP BTP subacounnt. 
+       
+       ![tempsnip](https://github.wdf.sap.corp/storage/user/105079/files/a9e349aa-86a2-46a4-9ce6-56d8ee72d7b2)
+       
+    - For the **SAP BTP Event Mesh service instance configuration**:
+      
+      - Updates **emname** at **line No.85** to a meaningful, read friendly name you would like to use. The Bridge Framework automation pipeline will creates the Event Mesh message client with the name you give here.
 
-6. **Open** the **parameters.json** file under the **root directory** in the container. This file is used to hold the data of your SAP BTP Subaccount and Microsoft Azure subscription. **The automation pipeline will use the value you give in this file to create resources on SAP BTP and Microsoft Azure, and deploy your extension application on SAP BTP**. 
+      - Updates **namespace** at **line No.86** to a meaningful, read friendly name you would like to use. The Bridge Framework automation pipeline will creates the Event Mesh message client with the namespace you give here.
+        
+        > - Note:
+        > - The **Format** of the **namespace** is **org_name/emname/uuid**, so please make sure to give the namespace in this format exactly, and give the **emname value you entered at line No.85 at the middle**. 
+        > - **Failed to give the namespace value in correct will cause automation pipeline execution failed out**. 
+
+
+7. **Open** the **parameters.json** file under the **root directory** in the container. This file is used to hold the data of your SAP BTP Subaccount and Microsoft Azure subscription. **The automation pipeline will use the value you give in this file to create resources on SAP BTP and Microsoft Azure, and deploy your extension application on SAP BTP**. 
 
     Please follow the instruction below to update the variable's value in this file**.
     
@@ -204,7 +221,8 @@ In this section, we will focus on using the Bridge Framework automation pipeline
            1. any meaningful, read freiendly name. The Bridge Framework will create the message queue in the SAP Event Mesh service with the name you give here. 
            
               > - **Note**
-              > - the **format** of the **queue name** should be **namespace/queueName**. 
+              > - The **format** of the **queue name** should be **namespace/queueName**. 
+              > - **Please use the value of namespace as the one you give in default.json file line No.86**
               > - For example,
               > - If you define the **namespace** as **TISCE/bridgeframeworkEmClient/s4h**, and **queue name** as **purchase-order-approval**
               > - Then you should give value as **TISCE/bridgeframeworkEmClient/s4h/purchase-order-approval**
@@ -218,23 +236,6 @@ In this section, we will focus on using the Bridge Framework automation pipeline
              
              1. If you subaccount is hosted on AWS: (subaccountname).aws-live
              2. If you subaccont is hosted on Azure: (subaccountname).azure-(cfcliapihostregion)
-
-8. Open the **default.json** file under the **usecases -> released** folder. Follow the instructions below to update this file.
-    
-    * Update line 16 instance name with the value you give in manifest.yaml line 13
-      
-      ![tempsnip](https://user-images.githubusercontent.com/29527722/208743037-d81f4ef7-e27a-4038-816e-3dc286d08094.png)
-      ![tempsnip](https://user-images.githubusercontent.com/29527722/208743263-46f5d19c-5782-4c9e-ac8a-09c20c9e2a5d.png)
-      
-    * Update line 23 instance name with the value you give in manifest.yaml at line 12.
-    * Update line 43 instance name with the value you give in manifest.yaml at line 10.
-    * Update line 51 instance name with the value you give in manifest.yaml at line 11.
-    * Delete line 53 ~ line 60.
-    * Update line 58 instance name with a meaningful name. 
-    * Update line 61 emname with a meaningful name.
-    * Update line 62 namespace with a meaningful name.
-    
-    ![tempsnip](https://user-images.githubusercontent.com/29527722/208746148-d90228cc-8299-4211-879f-8a3ebd1fb48f.png)
 
 ## 4. Trigger the Automation Tool Docker Container
 
