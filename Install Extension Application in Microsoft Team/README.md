@@ -9,6 +9,14 @@ The SAP S/4HANA extension application will be generated automatically after the 
 2.  **Expand btp-bridge-framework -> teams-app-package folder**, and **download** the **teams-app.zip** file to your local machine. This is the extension application that we will install in the Microsoft Teams app.
     
     ![tempsnip](https://user-images.githubusercontent.com/29527722/210104395-ec9896d0-d53c-4de5-99ff-5f4977794312.png)
+    
+3. **Open** the **manifest.json** file in the **teams-app.zip** you just downloaded. **Updates** the **isNotificationOnly** value to **false**. Save the changes. 
+    
+    ![Capture](https://github.wdf.sap.corp/storage/user/105079/files/6c36d2db-144a-4ac7-afe6-62383f1d441c)
+    
+    ![tempsnip](https://github.wdf.sap.corp/storage/user/105079/files/f0676bdd-d431-4d19-abb2-f0f18ff2fcf8)
+    
+    ![tempsnip](https://github.wdf.sap.corp/storage/user/105079/files/744724db-5650-419f-94e5-99bd8a5de155)
 
 ## 2. Install the Extension Application in Microsoft Teams
 
