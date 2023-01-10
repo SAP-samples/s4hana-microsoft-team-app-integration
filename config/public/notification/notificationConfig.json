@@ -9,5 +9,5 @@
     "Others": { "Creation Date": "CREATED_ON", "Priority": "PRIORITY" }
   },
   "DetailScreenConfig": "/frontend/simpleConfig/S4HanaOnPrem/Destination/PurchaseOrder.json",
-  "origSysManagementAppURL": "https://3.224.195.53:44300/sap/bc/ui2/flp#PurchaseOrder-manage&/C_PurchaseOrderTP(PurchaseOrder='objectId',DraftUUID=guid'00000000-0000-0000-0000-000000000000',IsActiveEntity=true)"
+  "origSysManagementAppURL": "https://s4hana-onprem-internal-host-ip:port/sap/bc/ui2/flp#PurchaseOrder-manage&/C_PurchaseOrderTP(PurchaseOrder='objectId',DraftUUID=guid'00000000-0000-0000-0000-000000000000',IsActiveEntity=true)"
 }
