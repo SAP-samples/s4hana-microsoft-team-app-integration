@@ -125,27 +125,3 @@ In this section, we will focusing on set up the principal propagation between SA
 
 23.  In the **ICM monitor** screen, select **Administration > ICM > Exit Soft > Global** to restart the system. 
 ![Picture43](https://user-images.githubusercontent.com/29527722/205173041-9842bf5d-bd52-4f08-b351-383cd40f6da5.png)
-
-
-
-## 2. Create a destination on SAP BTP 
-
-1. In the **SAP BTP subaccount**, go to **Connectivity > Cloud Connector** and verify that the Cloud Connector instance created in previous section is registered
-![Picture44](https://user-images.githubusercontent.com/29527722/205173299-996b51a1-808c-48e4-b801-05064754a1e5.png)
-
-2. Add a destination in **Connectivity > Destinations** section, using **New Destination** icon.
-    > ### Please follow the steps below to enter the value for the destination.
-    > - Name =  A meaningful name to your destination. 
-    > - Type = HTTP 
-    > - URL = http://<virtual-host>:<virtual -port> (created in previous section > Step 10) 
-    > - Proxy Type = OnPremise 
-    > - Authentication = PrincipalPropagation 
-    > - Additional properties 
-    > - sap-client = 100 
-    > - sap-platform = ABAP 
-    > - sap-sysid = S4H 
-    
-    Click on Save to save the newly created destination.
-    ![Picture45](https://user-images.githubusercontent.com/29527722/205173743-98269215-1310-4860-a77e-2d730d48690e.png)
-3. Check the connection to the destination service using either of the highlighted buttons and verify that the connection is successful.
-![Picture46](https://user-images.githubusercontent.com/29527722/205173934-309c2243-65e4-4d7e-a87e-bcfd1a070e26.png)
