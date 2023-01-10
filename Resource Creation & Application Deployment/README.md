@@ -273,5 +273,21 @@ As we already provided the SAP BTP subaccount and Microsoft Azure metadata withi
 7. Finally in your terminal you will see **SUCCESSFULLY FINISHED USE CASE EXECUTION**. This mean that all the resources creation and extension application deployment has been done successfully.  
 
     ![tempsnip](https://user-images.githubusercontent.com/29527722/208994218-2fa7ab65-cd45-41ed-9614-9f7edbcbc0a6.png)
+ 
+## 5. Potential Error Fixing (Optional)
 
-    
+Sometimes the API Permission grantaion on the Microsoft Azure app registration created by the Bridge Framework automation pipeline will failed out, and it will cause the issue that this app registration doesn't have the permission to query user information from SAP Graph service. Let's double check and manual fixing this issue if it presents.
+
+1. Go back to the Microsoft Azure Portal, find the app registration with the name you give in parameters.json file line No.25. 
+   
+   ![tempsnip](https://github.wdf.sap.corp/storage/user/105079/files/3ccc58e3-b268-4cf3-91c7-85709c96601f)
+   
+   ![tempsnip](https://github.wdf.sap.corp/storage/user/105079/files/3c8a2fe2-619f-467f-9f03-cfd438c2a678)
+
+2. Click the **API permissions** button on the left panel. Double check whether all the Microsoft Graph API permissions has the **green checkmark** under the **Status** column.
+   
+   ![tempsnip](https://github.wdf.sap.corp/storage/user/105079/files/c78b37c3-e4b7-4407-86da-a3864831f6ae)
+
+3. If not, then please click the **Grant admin consent for ticoo** button to manually grant Microsoft Graph API permissions to the app registration.
+   
+   ![tempsnip](https://github.wdf.sap.corp/storage/user/105079/files/b90969bc-0e95-4032-a6b9-c4eb0d21e28c)
