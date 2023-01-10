@@ -42,11 +42,11 @@ In this section, we will focus on using the Bridge Framework automation pipeline
     
     - For **MacOS** users
       - MacOs with **Intel Chip** 
-        - [Bridge Framework Automation Pipeline Docker Image](https://github.wdf.sap.corp/SCE/sap-mission-s4-hana-purchase-order-approval/releases/tag/v1.0.0-alpha)
+        - [Bridge Framework Automation Pipeline Docker Image](https://github.tools.sap/btp-use-case-factory/s4-hana-purchase-order-approval-in-ms-teams/releases/tag/v1.0.0-alpha)
       - MacOs with **M1 Chip**
-        - [Bridge Framework Automation Pipeline Docker Image](https://github.wdf.sap.corp/SCE/sap-mission-s4-hana-purchase-order-approval/releases/tag/v1.0.0-beta)
+        - [Bridge Framework Automation Pipeline Docker Image](https://github.tools.sap/btp-use-case-factory/s4-hana-purchase-order-approval-in-ms-teams/releases/tag/v1.0.0-beta)
     - For **WindowsOS** users
-      - [Bridge Framework Automation Pipeline Docker Image](https://github.wdf.sap.corp/SCE/sap-mission-s4-hana-purchase-order-approval/releases/tag/v1.0.0-alpha)
+      - [Bridge Framework Automation Pipeline Docker Image](https://github.tools.sap/btp-use-case-factory/s4-hana-purchase-order-approval-in-ms-teams/releases/tag/v1.0.0-alpha)
     
 2. Open the CMD tool in your local machine, go into the directory where the downloaded Bridge Framework automation pipeline docker image stored.
     
