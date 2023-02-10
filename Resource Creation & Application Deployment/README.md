@@ -239,41 +239,62 @@ In this section, we will focus on using the Bridge Framework automation pipeline
 
 ## 4. Trigger the Automation Tool Docker Container
 
-As we already provided the SAP BTP subaccount and Microsoft Azure metadata within the automation tool configuration file, now it's time for us to run the automation tool container and let it create the resources on SAP BTP and Microsoft Azure for us, and deploy the extension application for us.
+As we already provided the SAP BTP subaccount and Microsoft Azure metadata within the automation tool configuration file, now it's time for us to run the automation tool container, let it create the resources on SAP BTP and Microsoft Azure for us, and deploy the extension application for us.
 
-1. Open a new terminal in the VSC, and execute the command "./btpsa" under the root directory in the container.
-    
-    ![tempsnip](https://user-images.githubusercontent.com/29527722/208748406-32eb7599-770e-49e2-aa0a-d902fdefcfc8.png)
+1. Open a new terminal in the VSC, and execute the command "**./btpsa**" under the root directory in the container.
 
-2. There will be a link shows up in the terminal and asks you to do the manual login. Copy this link and open it in a browser, and click Procedd and log in button in the pop-up page in the browser.
+2. There will be a link shows up in the terminal and asks you to do the manual login. Copy this link and open it in a browser, and click **Yes, log in to SAP BTP** button in the pop-up page in the browser.
     
-    ![tempsnip](https://user-images.githubusercontent.com/29527722/208748732-760a94a4-d4cf-4a1a-b2d5-8eb5fff5bb9f.png)
-    ![tempsnip](https://user-images.githubusercontent.com/29527722/208748964-90546496-274b-485d-ac36-75f22e40a052.png)
+    ![Capture](https://github.wdf.sap.corp/storage/user/105079/files/6a8d9848-3009-42b8-a6e6-0f02c82a2a40)
+    ![Capture1](https://github.wdf.sap.corp/storage/user/105079/files/2f2976ad-a9b8-4792-b423-4e5bb4a38479)
 
 3. After a while you will see there is a manual login request shows up in the terminal. This step is for Microsoft Azure Powershall authentication. Copy the authentication code and then open the URL in the browser to finish the manual Azure login.
     
-    ![xx](https://user-images.githubusercontent.com/29527722/208751511-90c4b136-72fa-4216-9dfe-30c7c8471ecd.png)
-    ![Capture2](https://user-images.githubusercontent.com/29527722/208751607-f6b7184a-fc47-41f9-add5-acece1c5f37e.PNG)
-    ![Capture3](https://user-images.githubusercontent.com/29527722/208751742-523f1b7e-289d-4562-9abb-1296508e0a31.PNG)
+    ![Capture3](https://github.wdf.sap.corp/storage/user/105079/files/eefd62ac-7ded-422f-ae39-980c838fd787)
+    ![Capture4](https://github.wdf.sap.corp/storage/user/105079/files/3fa90320-7d5e-4f75-9100-52dfc5703ef0)
+    ![Capture5](https://github.wdf.sap.corp/storage/user/105079/files/5714d678-736c-4d50-8b25-19cd409be29d)
 
 4. Then you will see another manual login request shows up in the terminal. This step is for Microsoft Azure CLI authentication. Copy the newly generated authentication code and URL into the browser, and finish the second time manual Azure login.
     
-    ![Capture4](https://user-images.githubusercontent.com/29527722/208752435-2bb2c0b7-5093-4584-b478-1967ad1c92e7.PNG)
-    ![Capture5](https://user-images.githubusercontent.com/29527722/208752453-581b0c39-ec04-4b04-a55a-a1e104a18618.PNG)
-    ![Capture3](https://user-images.githubusercontent.com/29527722/208751742-523f1b7e-289d-4562-9abb-1296508e0a31.PNG)
-
-5. Once the Microsoft Azure resource creation is done, the SAP BTP service instances creation and extension application deployment on SAP BTP side will begin. You will be asked to do provide the **SAP BTP subaccount credential** in the terminal. Please enter the your **BTP subaccount CF API endpoint**, **Email**, and **Password** in the ternimal, and then select the **subaccount** and **target space** which will be used as a host of your extension application.
+    ![Capture7](https://github.wdf.sap.corp/storage/user/105079/files/671bd6a6-3c41-4cbf-ae93-f0e5bc126dee)
+    ![Capture8](https://github.wdf.sap.corp/storage/user/105079/files/461effd9-2dd2-4ef8-89b1-2393cb02526f)
+    ![Capture9](https://github.wdf.sap.corp/storage/user/105079/files/c3b369ac-f8b0-4e0e-9243-b2d8c5cf362b)
     
-    ![tempsnip](https://user-images.githubusercontent.com/29527722/208992547-97725af7-b77e-470a-9037-129c828f5ec2.png)
+5. After a while you will see the Microsoft Graph PowerShell login request. Copy the newly generated authentication code and URL into the browser, and finish the third time manual Azure login.
     
-6. Since the CF CLI will not hold your login credentials for a long time, so you will be asked again to provide your SAP BTP credentials like what we did in step 5. Please keep an eye on the terminal and process it timely. 
+    ![Capture11](https://github.wdf.sap.corp/storage/user/105079/files/6f4d8c2a-cc62-44da-90a2-131d2ac91c4f)
+    ![Capture12](https://github.wdf.sap.corp/storage/user/105079/files/12739647-724d-4f08-9f22-e8b2dadb0c5d)
+    ![Capture13](https://github.wdf.sap.corp/storage/user/105079/files/180fe302-126c-4ce6-a96c-a5f51b0a86e5)
+
+6. Once the Microsoft Azure resource creation is done, the SAP BTP service instances creation and extension application deployment on SAP BTP side will begin. You will be ask to obtain an temporary authentication code by using the URL shows up in the terminal, and copy the code back to the terminal.
     
-    ![tempsnip](https://user-images.githubusercontent.com/29527722/208993594-a8ea5402-cdf7-40d3-804e-ec6b98b2c653.png)
+    ![Capture15](https://github.wdf.sap.corp/storage/user/105079/files/9dffcde8-cb07-426e-a83a-b6ebf1dab0f8)
+    ![Capture16](https://github.wdf.sap.corp/storage/user/105079/files/f2c2f3d7-bf5a-4816-8427-fe3d533b18a9) 
+    
+7. Since the CF CLI will not hold your login credentials for a long time, so you will be asked again to provide your SAP BTP credentials like what we did in step 6 for several times. **Please keep an eye on the terminal and process it timely**. 
+    
+    - Bridge Framework Automation Pipeline actions which needs to perform manual BTP login:
+        - Creating env in BTP
+        
+            ![Capture17](https://github.wdf.sap.corp/storage/user/105079/files/74d9ebdb-842e-4cb1-8c31-848402520d3f)
+            
+        - Pushing applications to BTP account
+        
+            ![Capture19](https://github.wdf.sap.corp/storage/user/105079/files/a7338362-97f5-4ce7-8872-3cf350e4dfe5)
+            
+        - Getting key credentials
+        
+            ![Capture21](https://github.wdf.sap.corp/storage/user/105079/files/a36f9697-358b-4d5d-b4a3-64e4d2e0f50d)
+       
+8. After a while in the terminal you will see a text as **COMMAND EXECUTION: Uploading teams app package to MS Teams**. In this step the automation pipeline will upload the Microsoft Teams extension application to the Microsoft Teams automatically. This step requires login to the Microsoft Teams Cmdlet manually. Copy the authentication code and then open the URL in the browser to finish this step.
 
-7. Finally in your terminal you will see **SUCCESSFULLY FINISHED USE CASE EXECUTION**. This mean that all the resources creation and extension application deployment has been done successfully.  
+    ![Capture23](https://github.wdf.sap.corp/storage/user/105079/files/36b1bd47-42b2-4ebe-ad29-2a98cf3de564)
+    
 
-    ![tempsnip](https://user-images.githubusercontent.com/29527722/208994218-2fa7ab65-cd45-41ed-9614-9f7edbcbc0a6.png)
- 
+9. Finally in your terminal you will see **SUCCESSFULLY FINISHED USE CASE EXECUTION**. This mean that all the resources creation and extension application deployment has been done successfully.  
+
+    ![Capture24](https://github.wdf.sap.corp/storage/user/105079/files/83a392a3-de22-4cd7-a580-36bfd7a9b28f)
+    
 ## 5. Potential Error Fixing (Optional)
 
 Sometimes the API Permission grantaion on the Microsoft Azure app registration created by the Bridge Framework automation pipeline will failed out, and it will cause the issue that this app registration doesn't have the permission to query user information from SAP Graph service. Let's double check and manual fixing this issue if it presents.
