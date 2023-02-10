@@ -94,7 +94,7 @@ In this section, we will focus on using the Bridge Framework automation pipeline
 
     ![tempsnip](https://github.wdf.sap.corp/storage/user/105079/files/a5eaacb5-b3f4-460e-901e-e413cc68be8d)
     
-6. Open the **default.json** file under the **directory usecases -> released -> default.json**. This files contains the information which the Bridge Framework automation pipeline will used to configure the SAP BTP Service instances needed by the Bridge Framework. We needs to **update some configurations** for the **SAP BTP Destination service instance**, and the **SAP Event Mesh service instance**.
+6. Open the **default.json** file under the directory **usecases -> released -> default.json**. This files contains the information which the Bridge Framework automation pipeline will used to configure the SAP BTP Service instances needed by the Bridge Framework. We needs to **update some configurations** for the **SAP BTP Destination service instance**, and the **SAP Event Mesh service instance**.
     
     - For the **SAP BTP Destination service instance configuration**, **updates** the **http://s4hanaonprem:44300** at **line No.53** to the **virtual host name** and **virtual host port** you defined in the SAP S/4HANA Cloud Connector. You could find your SAP S/4HANA Cloud Connector virtual host and virtual port information on the SAP BTP subacounnt. 
        
@@ -123,6 +123,7 @@ In this section, we will focus on using the Bridge Framework automation pipeline
         - **globalaccount** : the SAP BTP global account name.
         - **subaccountid**: Subaccount ID shows on your SAP BTP subaccount Overview page.
         - **subaccountname**: Subdomain name shows on your SAP BTP subaccount Overview page
+        - **subdomain**: Subdomain name shows on your SAP BTP subaccount Overview page
         - **orgid**: Org ID shows on your SAP BTP subaccount Overview page.
         - **org**: Org Name shows on your SAP BTP subaccount Overview page.
         - **cfcliapihostregion**: This value is part of API Endpoint. Somethinkg like US20/US10
@@ -133,88 +134,82 @@ In this section, we will focus on using the Bridge Framework automation pipeline
     
      - **Microsft Azure Subscription Section**
      
-       From the line No.15 to line No.56 is the place for you to configure the resource needed by the Bridge Framework on your Microsoft Azure subscription.
+       From the line No.16 to line No.55 is the place for you to configure the resource needed by the Bridge Framework on your Microsoft Azure subscription.
        
-         - **azureResources.tags**  (Line No.16 - No.19)
+         - **azureResources.tags**  (Line No.17 - No.20)
            
            This section is used to adding tags to the Microsoft Blob Storage service and Microsoft Bot Service that would be created by the automation pipeline. So that you could it to monitor the cost of these two services in the Microsoft Azure Cost Management console.
            
            - **azureResources.tags.sourceSystem**: any read friendly name of your sourcing SAP product. You could leave it as what it is for now.
            - **azureResources.tags.businessProcess**: any read friendly name of the business process you would like to integrated. You could leave it as what it is for now.
            
-         - **azureResources.resourceGroup**  (Line No.20 - No.23)
+         - **azureResources.resourceGroup**  (Line No.21 - No.24)
          
            This section is used to configure the name of the Microsoft Azure resource group and it's location. The Bridge Framework automation pipeline will use it to create the resouce group with the name and location you given here.
            
            - **azureResources.resourceGroup.location**: **westus** or any location geographically near to you. 
            - **azureResources.resourceGroup.resourceGroupName**: any read friendly name. 
          
-         - **azureResources.applicationRegistration** (Line No.24 - No.35)
+         - **azureResources.applicationRegistration** (Line No.25 - No.36)
          
            This section is used to configure the App Registration on Microsoft Azure. The Bridge Framework automation pipeline will use it to create the App Registration with the name you given here.
            
            - **azureResources.applicationRegistration.registrationName**: any read friendly name.
            - **azureResources.applicationRegistration.replyUrlsPrefixes**:
                
-               1. Delet the domain name at line No.29.
-               2. Change the us10 at line No.30 to the value of cfcliapihostregion you gave at line No.10 in this file.
+               1. Delete the domain name at line No.30.
+               2. Change the us10 at line No.30 to the value of cfcliapihostregion you gave at line No.11 in this file.
            
            - **azureResources.applicationRegistration.identifierUrisPrefixes**:
                
-               1. Change the us10 at line No.32 to the value of cfcliapihostregion you gave at line No.10. in this file
+               1. Change the us10 at line No.33 to the value of cfcliapihostregion you gave at line No.11. in this file
                
            - **azureResources.applicationRegistration.tokenExchangeUrlPrefix**:
            
-               1. Change the us10 at line No.34 to the value of cfcliapihostregion you gave at line No.10 in this file.
+               1. Change the us10 at line No.35 to the value of cfcliapihostregion you gave at line No.11 in this file.
                
-         - **azureResources.botService** (Line No.36 - No.44)
+         - **azureResources.botService** (Line No.37 - No.45)
          
            This section is used to configure the Bot Service on Microsoft Azure. The Bridge Framework automation pipeline will use it to create the Azure Bot Service with the name you given here.
            
              - **azureResources.botService.botName**: any meaningful, ready freiendly name you would like to use. The Bridge Framework automation pipeline will create the bot service with the name you give here.
              - **azureResources.botService.messagingEndpoint**:
                
-               1. Change the us10 at line No.38 to the value of cfcliapihostregion you gave at line No.10 in this file.
+               1. Change the us10 at line No.39 to the value of cfcliapihostregion you gave at line No.11 in this file.
                
              - **azureResources.botService.providerScopeBaseUrl**:
              
-               1. Change the us10 at line No.38 to the value of cfcliapihostregion you gave at line No.10 in this file.
+               1. Change the us10 at line No.40 to the value of cfcliapihostregion you gave at line No.11 in this file.
                
              - **azureResources.botService.connectionNamePrefix**: any meaningful, ready freiendly name you would like to use.
 
-        - **azureResources.blobStorage** (Line No.45 - No.50)
+        - **azureResources.blobStorage** (Line No.46 - No.51)
         
           This section is used to configure the Blob Storage Service on Microsoft Azure. The Bridge Framework automation pipeline will use it to create the Blob Storage Account and Blob Storage Container with the name you given here.
           
           - **azureResources.blobStorage.blobStorageContainerName**: any meaningful, ready freiendly name you would like to use. The Bridge Framework will create the Azure Blob Storage container with the name you give here.
           - **azureResources.blobStorage.blobStorageAccountName**: any meaningful, ready freiendly name you would like to use. The Bridge Framework will create the Azure Blob Storage account with the name you give here. 
           
-        - **azureResources.existingEnterpriseApps** (Line No.51 - No.55)
+        - **azureResources.enterpriseApp** (Line No.52 - No.54)
         
-          This section is used to connect the Azure Bot Service with the Enterprise Application we manually configured in this [prevsiou step](https://github.wdf.sap.corp/SCE/sap-mission-s4-hana-purchase-order-approval/blob/mission/Principle-Propagation-Microsoft-Azure-SAP-BTP/README.md).
+          This section is used to grant Microsoft Teams extension application's user access to the Enterprise Application we manually configured in this [prevsiou step](https://github.wdf.sap.corp/SCE/sap-mission-s4-hana-purchase-order-approval/blob/mission/Principle-Propagation-Microsoft-Azure-SAP-BTP/README.md).
           
-          - **azureResources.existingEnterpriseApps.sapPlatformObjId**:
+          - **azureResources.enterpriseApp.emails**:
             
-            1. Go back to the Azure Portal, Under the App Registration search the name of the Enterprise Application we created in this [prevsiou step](https://github.wdf.sap.corp/SCE/sap-mission-s4-hana-purchase-order-approval/blob/mission/Principle-Propagation-Microsoft-Azure-SAP-BTP/README.md).
-            
-              ![tempsnip](https://github.wdf.sap.corp/storage/user/105079/files/42b44fee-f2ff-48fa-ae33-cf1a07d43905)
-            
-            2. Go into the select the app registration of the enterprise application, **copy the Object ID** value of the app registration. This is the sapPlatformObjId that we are looking for.
-            
-              ![tempsnip](https://github.wdf.sap.corp/storage/user/105079/files/94578600-46dd-4c1f-a444-005ced6c9384)
+            1. Add purchase order creator, purchase order approver's email address into this email array.
 
      - **Additional Automation Configuration Section**
      
-       From the line No.57 to line No.73 is the place for you to configure the additional resources needed by the Bridge Framework on your SAP BTP subaccount.
+       From the line No.56 to line No.77 is the place for you to configure the additional resources needed by the Bridge Framework on your SAP BTP subaccount.
        
-       - **additionalAutomationConfiguration.queueCreation** (Line No.63 - No.67)
+       - **additionalAutomationConfiguration.queueCreation** (Line No.62 - No.66)
          
          This section is used to configure the Message Queue and the Webhook Subscription of the SAP Event Mesh Services. The Message Queueu will receive the purchase order & workflow instance data sending from SAP S/4HANA On-Premise system, and the Webhook subscription will be forwarding the message from message queue to the bridge framework backend service whish is hosted in your SAP BTP Subaccount.
          
          - **additionalAutomationConfiguration.queueCreation.subscription_name**: any meaningful, read freiendly name. The Bridge Framework automation pipeline will create the Webhook subscription on the message queue with the name you give here.
          - **additionalAutomationConfiguration.queueCreation.endpoint**:
            
-           1. Change the us10 at line No.65 to the value of cfcliapihostregion you gave at line No.10 in this file.
+           1. Change the us10 at line No.64 to the value of cfcliapihostregion you gave at line No.11 in this file.
            
          - **additionalAutomationConfiguration.queueCreation.queue_name**:
            
@@ -227,8 +222,13 @@ In this section, we will focus on using the Bridge Framework automation pipeline
               > - If you define the **namespace** as **TISCE/bridgeframeworkEmClient/s4h**, and **queue name** as **purchase-order-approval**
               > - Then you should give value as **TISCE/bridgeframeworkEmClient/s4h/purchase-order-approval**
     
+       - **additionalAutomationConfiguration.destinationCreation** (Line No.67 - No.71)
+       
+         - **additionalAutomationConfiguration.destinationCreation.destination_name**: copy and paste the value of defalut.json file at line No.51.
+         - **additionalAutomationConfiguration.destinationCreation.virtual_host**: the virtual host name entered in the S/4HANA On-Premise Cloud Connector.
+         - **additionalAutomationConfiguration.destinationCreation.virtual_host**: the virtual port entered in the S/4HANA On-Premise Cloud Connector.
     
-       - **additionalAutomationConfiguration.envCreation** (Line No.68 - No.72)
+       - **additionalAutomationConfiguration.envCreation** (Line No.72 - No.76)
        
          This section is used to create some necessary enviroument variables needed by the Bridge Framework backend service that will be deployed in your SAP BTP subaccount.
          
