@@ -113,7 +113,7 @@ After you clone the ABAP backgroud job source code from the GitHub repo, we have
     
     ![tempsnip](https://user-images.githubusercontent.com/29527722/209027137-2214bf32-9c83-40b7-99fa-a85a31fd532c.png)
     
-    - **dest_name**: Change to the name of RFC destination we created in the step [2.2](https://github.com/SAP-samples/s4hana-microsoft-team-app-integration/tree/mission/Schedule%20SAP%20S4HANA%20ABAP%20Job#2-configure-an-rfc-destination-in-sap-s4hana-on-premises-system)
+    - **dest_name**: Change to the name of RFC destination we created in the step [2.2](https://github.tools.sap/btp-use-case-factory/s4-hana-purchase-order-approval-in-ms-teams/blob/mission/Schedule%20SAP%20S4HANA%20ABAP%20Job/README.md#2-configure-an-rfc-destination-in-sap-s4hana-on-premises-system)
     - **auth_profile**: Change to the name of OAuth profile we created in the step [3.2](https://github.com/SAP-samples/s4hana-microsoft-team-app-integration/tree/mission/Schedule%20SAP%20S4HANA%20ABAP%20Job#3-configure-the-oauth-client--oauth-profile-in-the-sap-s4hana-on-premises-system)
     - **auth_conf**: Change to the name of OAuth Configuration we created in the step [3.2](https://github.com/SAP-samples/s4hana-microsoft-team-app-integration/tree/mission/Schedule%20SAP%20S4HANA%20ABAP%20Job#3-configure-the-oauth-client--oauth-profile-in-the-sap-s4hana-on-premises-system)
     
