@@ -44,6 +44,9 @@ In this section we will configure the OAuth Client and OAuth Profile in the SAP 
 
 1. Go back to the main page of SAP S/4HANA On-Premises in SAP GUI. Enter the transaction code **OA2C_CONFIG** to open the **OAuth 2.0 Clients web application**. Click the create button to create a new OAuth 2.0 client.
     
+    > - Note
+    > If OAuth 2.0 Clients Web application was not open correctly, please use SAP S/4HANA On-Premise external IP address and port as the domain name in the pop up browser
+    
     ![tempsnip](https://user-images.githubusercontent.com/29527722/207477632-1aba580c-56bc-407a-8e30-b79087fa36f6.png)
 
 2. Follow the instruction below to fill-out the form of **Create a new OAuth 2.0 Client**. **Note done the configuration name as we will need it later on**.
