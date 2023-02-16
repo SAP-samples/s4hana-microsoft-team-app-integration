@@ -128,7 +128,7 @@ After you clone the ABAP backgroud job source code from the GitHub repo, we have
     ![tempsnip](https://user-images.githubusercontent.com/29527722/209028746-55bf8293-0066-453a-9cbd-df4f1c88b73f.png)
     ![tempsnip](https://user-images.githubusercontent.com/29527722/209029249-0a971329-fc44-4c37-a4aa-6e86e19afdd7.png)
 
-6. Scroll down to the line 51, **replace message queue name sap%2Fem%2Fs4%2Fpurchase-order** to the value of **pythonvars.envCreation.queue_name** you give in this [step section 3.5](https://github.com/SAP-samples/s4hana-microsoft-team-app-integration/blob/mission/Resource%20Creation%20%26%20Application%20Deployment/README.md#3-update-the-automation-tool-configuration-file).
+6. Scroll down to the line 51, **replace message queue name sap%2Fem%2Fs4%2Fpurchase-order** to the value of **pythonvars.envCreation.queue_name** you give in this [step section 3.5](https://github.tools.sap/btp-use-case-factory/s4-hana-purchase-order-approval-in-ms-teams/blob/mission/Schedule%20SAP%20S4HANA%20ABAP%20Job/README.md#3-configure-the-oauth-client--oauth-profile-in-the-sap-s4hana-on-premises-system).
     
     > - Note
     > - The value of message queue name you give in here should be the **encoded full-qulified** name. For example is the queue name is **sap/em/s4/purchase-order**, then the value you should give here is **sap%2Fem%2Fs4%2Fpurchase-order**.
