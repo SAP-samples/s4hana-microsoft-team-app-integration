@@ -42,7 +42,7 @@ In this section we will configure an RFC Destination and point to the SAP BTP Ev
 
 In this section we will configure the OAuth Client and OAuth Profile in the SAP S/4HANA. The OAuth Client and Oauth Profile will be used along with the RFC Destination we just created in the SAP S/4HANA ABAP backgroud job to enable the communication.
 
-1. Go back to the main page of SAP S/4HANA On-Premises in SAP GUI. Enter the transaction code OA2C_CONFIG to open the OAuth 2.0 Clients web application. Click the create button to create a new OAuth 2.0 client.
+1. Go back to the main page of SAP S/4HANA On-Premises in SAP GUI. Enter the transaction code **OA2C_CONFIG** to open the **OAuth 2.0 Clients web application**. Click the create button to create a new OAuth 2.0 client.
     
     ![tempsnip](https://user-images.githubusercontent.com/29527722/207477632-1aba580c-56bc-407a-8e30-b79087fa36f6.png)
 
