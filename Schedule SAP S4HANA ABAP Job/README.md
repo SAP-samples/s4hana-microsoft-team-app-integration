@@ -91,7 +91,7 @@ In this section, we will focus on import & schedule the SAP S/4HANA ABAP backgro
 3. In the **New Online Repository** page, please follow the instruction below to fill-out the form. Then click **Create Online Repo** button once done.
     
     > - **Git Repository URL**: 
-    > - **Package**: Please follow this instruction to create a new package.
+    > - **Package**: Please follow [this instruction](https://github.tools.sap/btp-use-case-factory/s4-hana-purchase-order-approval-in-ms-teams/blob/mission/Schedule%20SAP%20S4HANA%20ABAP%20Job/README2.md) to create a new package.
     > - **Branch**: s4h-abap
     > - **Display Name**: any ready friendly name
     
