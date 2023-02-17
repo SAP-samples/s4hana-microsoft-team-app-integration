@@ -91,7 +91,7 @@ In this section, we will focus on import & schedule the SAP S/4HANA ABAP backgro
 3. In the **New Online Repository** page, please follow the instruction below to fill-out the form. Then click **Create Online Repo** button once done.
     
     > - **Git Repository URL**: 
-    > - **Package**: any package in your SAP S/4HANA On-Premises system
+    > - **Package**: Please follow this instruction to create a new package.
     > - **Branch**: s4h-abap
     > - **Display Name**: any ready friendly name
     
