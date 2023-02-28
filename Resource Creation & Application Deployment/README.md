@@ -92,7 +92,7 @@ In this section, we will focus on using the Bridge Framework automation pipeline
     
     ![tempsnip](https://user-images.githubusercontent.com/29527722/208549375-3a3fcb46-7df9-48b8-aefb-455bad300835.png)
     
-5. **Open** the **notificationConfig.json** file under the directory **btp-bridge-framework -> config -> public -> notification**. At line No.12 update the **s4hana-onprem-internal-host-ip**:**port** to your **SAP S/4HANA On-Premise system internal server ip** and **port number**. Save the changes.
+5. **Open** the **notificationConfig.json** file under the directory **btp-bridge-framework -> config -> public -> notification**. At line No.12 update the **s4hana-onprem-internal-host-ip**:**port** to your **SAP S/4HANA On-Premise System external server ip** and **port number**. Save the changes.
 
     ![tempsnip](https://github.wdf.sap.corp/storage/user/105079/files/a5eaacb5-b3f4-460e-901e-e413cc68be8d)
     
