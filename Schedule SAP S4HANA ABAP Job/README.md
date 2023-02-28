@@ -22,6 +22,8 @@ In this section we will configure an RFC Destination and point to the SAP BTP Ev
     ![tempsnip](https://user-images.githubusercontent.com/29527722/207472801-8a6612aa-0071-4c0b-910f-d729b2bf8adb.png)
 
 2. Give the proper name of the destination, select **G HTTP Connection to external server** from the Connection Type dropdown. Click the **green right mark** to go to the next page. **Note done the destination name as we will need it later on**.
+
+    > - Please **DO NOT** give the destination name longer than 15 characters
     
     ![tempsnip](https://user-images.githubusercontent.com/29527722/207473304-232dd4a2-ebcd-41df-8d2d-16d6c9225050.png)
 
