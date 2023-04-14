@@ -3,7 +3,7 @@ In this project, we would like to demonstrate how to integrate the SAP S/4HANA w
 
 ## Business Scenario
 
-![Capture](https://user-images.githubusercontent.com/29527722/208214036-a1ac0fa6-1a00-4a21-bba4-850d609fac72.PNG)
+![Business Scenario](./assets/images/Business%20Scenario.png)
 
 - The buyer creates a new Purchase Order in SAP S/4HANA On-Premises system.
 - The purchase manager receives a notification in Microsoft Teams in the form of a dialog card.
@@ -15,7 +15,7 @@ In this project, we would like to demonstrate how to integrate the SAP S/4HANA w
 
 ## System Architecture Diagram
 
-![shortcut](https://user-images.githubusercontent.com/29527722/210670777-e5465805-3156-404d-9a32-1eed1512f17f.png)
+![System Architecture](./assets/images/System%20Architecture.png)
 
 The **SAP BTP Bridge Framework** is the **key component** that **connecting** the **SAP S/4HANA** and **Microsoft Teams**. It is an SAP BTP based integration framework and allows user to define the UI of the extension application which will be installed in the Microsoft Teams easily and quickly by fill out JSON configuration files. 
 
