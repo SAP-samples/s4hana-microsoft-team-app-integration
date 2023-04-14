@@ -26,7 +26,7 @@ In this section, we will go through the use case of approve SAP S/4HANA purchase
 
 1. **Alex** as a purchase order creator login to the SAP S/4HANA system and **created a new purchase order** with the **purchase order ID** as **4500001144**, and this purchase order is need purchase order approver Weikun's approval.
 
-    ![Capture](https://user-images.githubusercontent.com/29527722/210622494-00ccad6d-c156-42b6-85a5-e08f64d73b5d.PNG)
+    ![1](../assets/E2E%20Testing/1.png)
     
 2. **Weikun** as a purchase order approver **receives the notifcation card** in the Microsoft Teams. From the notifcation card he couold get the following brife information about the purchase order
     
@@ -35,37 +35,37 @@ In this section, we will go through the use case of approve SAP S/4HANA purchase
     - Purchase Order Creation Date
     - Priority of Purchase Order
     
-    ![tempsnip](https://user-images.githubusercontent.com/29527722/210622839-edb2d694-8445-4513-83ac-2972be5314a3.png)
+    ![2](../assets/E2E%20Testing/2.png)
     
  3. **Weikun** could **look the purchase order details** information by clicking the **View More Details** button in the notification card.
      
-     ![Capture](https://user-images.githubusercontent.com/29527722/210623031-f1386e25-5ef6-4416-818f-06697c090159.PNG)
+     ![3](../assets/E2E%20Testing/3.png)
      
-     ![Capture](https://user-images.githubusercontent.com/29527722/210623217-484ef849-1216-4f7a-849e-66d86289dff8.PNG)
+     ![4](../assets/E2E%20Testing/4.png)
      
-     ![Capture](https://user-images.githubusercontent.com/29527722/210623358-e3ee6afc-ea9a-42fe-9c1c-1115623442c6.PNG)
+     ![5](../assets/E2E%20Testing/5.png)
 
 4. If **Weikun** needs have an discussion with Alex regarding the purchase order, then he could simply forward this notification card to Alex and start the conversation by clicking the **Discuss** button, and then **start the conversation** with purchase order creator **Alex**
     
-    ![tempsnip](https://user-images.githubusercontent.com/29527722/210623602-620f5b89-f23b-4d8b-83a9-dd721b037f32.png)
+    ![6](../assets/E2E%20Testing/6.png)
     
-    ![tempsnip](https://user-images.githubusercontent.com/29527722/210624571-c0184e5f-3d8e-48cc-b54d-e98857dc21bc.png)
+    ![7](../assets/E2E%20Testing/7.png)
 
 5. **Alex** will receive the notification card forwarded by Weikun and Weikun's question in the chat. If he needs to recall the details of the purchase order before reply to Weikun, then he could simply click on the **Go to PO button** in the notification card. This will **re-direct** Alex back to the **SAP S/4HANA Manage Purchase Order** app and then displaying the purchase order details data.
     
-    ![tempsnip](https://user-images.githubusercontent.com/29527722/210625742-633b97c8-7e39-4d33-b259-f5d42ded6742.png)
+    ![8](../assets/E2E%20Testing/8.png)
     
-    ![Capture](https://user-images.githubusercontent.com/29527722/210625893-41c12f50-51a6-49dd-aed8-acb08ddeb013.PNG)
+    ![9](../assets/E2E%20Testing/9.png)
 
 6. **Weikun** could then approve/reject the purchase order by clicking the Approve or Reject button based on the Alex's reply.
     
-    ![Capture](https://user-images.githubusercontent.com/29527722/210626385-79fa6a4e-a7ed-4177-86ee-50886b83244a.PNG)
+    ![10](../assets/E2E%20Testing/10.png)
     
-    ![tempsnip](https://user-images.githubusercontent.com/29527722/210626584-802f65e6-20dc-481d-b02d-80e0cff2c711.png)
+    ![11](../assets/E2E%20Testing/11.png)
 
 7. **Weikun** rejects the purchase order and inform Alex with the reason. The approval status of the purchase order will also updated both in the notification card and in the SAP S/4HANA system. 
     
-    ![tempsnip](https://user-images.githubusercontent.com/29527722/210627021-d8a1f940-9e07-4d8e-8b0d-93e80834296d.png)
+    ![12](../assets/E2E%20Testing/12.png)
     
-    ![tempsnip](https://user-images.githubusercontent.com/29527722/210627200-db22c6a4-5b54-4059-aff3-2a3402709f2c.png)
+    ![13](../assets/E2E%20Testing/13.png)
     
