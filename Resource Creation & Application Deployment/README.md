@@ -10,12 +10,12 @@ In this section, we will focus on using the Bridge Framework automation pipeline
 
 2. Assign **service entities** to your SAP BTP subaccount. Click the **Entitlements -> Entity Assignments** under the SAP BTP Glocbal account cockpit, check the subaccount you would like to use as a host, click the Select button.
     
-    ![tempsnip](https://user-images.githubusercontent.com/29527722/208505567-e0017836-7fda-468a-8aab-fb58488fe955.png)
+    ![1](../assets/Resource%20Creation%20%26%20Application%20Deployment/1.png)
 
 3. Click the **Configure Entitlements** button, then click the **Add Service Plan** button.
     
-    ![tempsnip](https://user-images.githubusercontent.com/29527722/208506686-af80ebad-3f61-4c4a-8d66-039c7cacfad0.png)
-    ![tempsnip](https://user-images.githubusercontent.com/29527722/208506850-f77f2675-c4c3-4254-8237-449a588351d8.png)
+    ![2](../assets/Resource%20Creation%20%26%20Application%20Deployment/2.png)
+    ![3](../assets/Resource%20Creation%20%26%20Application%20Deployment/3.png)
 
 4. Add below service plans into your subaccount.
     
@@ -23,18 +23,18 @@ In this section, we will focus on using the Bridge Framework automation pipeline
     - **Event Mesh default** plan
     - **Event Mesh standard (Application)** plan
 
-    ![tempsnip](https://user-images.githubusercontent.com/29527722/208507850-1f6d861b-e584-4d22-91f3-41c2fade6cff.png)
-    ![tempsnip](https://user-images.githubusercontent.com/29527722/208508084-19ed9ba9-1e1d-489f-b01e-79f817ae31f9.png)
+    ![4](../assets/Resource%20Creation%20%26%20Application%20Deployment/4.png)
+    ![5](../assets/Resource%20Creation%20%26%20Application%20Deployment/5.png)
 
 5. Click the **Save** button to save the changes.
     
-    ![tempsnip](https://user-images.githubusercontent.com/29527722/208508366-059cb885-ee72-4d0e-b57e-f88e8c8b0b72.png)
+    ![6](../assets/Resource%20Creation%20%26%20Application%20Deployment/6.png)
 
 6. Go into the SAP BTP subaccount, enable the Cloud Foundry by clicking the **Enable Cloud Foundry** button. Create the new space by clikcing the **Create Space** button.
     
     - **Note down the space name, we will use it later**.
     
-    ![tempsnip](https://user-images.githubusercontent.com/29527722/208509277-d51cd14d-e04f-4eea-90bf-27fc4c8669af.png)
+    ![7](../assets/Resource%20Creation%20%26%20Application%20Deployment/7.png)
 
 ## 2. Download the Automation Tool Docker Image
 
@@ -50,19 +50,19 @@ In this section, we will focus on using the Bridge Framework automation pipeline
     
 2. Open the CMD tool in your local machine, go into the directory where the downloaded Bridge Framework automation pipeline docker image stored.
     
-    ![tempsnip](https://user-images.githubusercontent.com/29527722/208526292-4389f31b-0c2d-4b9b-afff-65c3fd40e737.png)
+    ![8](../assets/Resource%20Creation%20%26%20Application%20Deployment/8.png)
 
 3. Issue the command command below to load the Bridge Framework automation pipeline docker image in your local machine.
     
     - **docker load -i ./bridge-automation-pipeline.tar.gz**
     
-    ![tempsnip](https://user-images.githubusercontent.com/29527722/208526799-f44d4757-84a1-4e98-a833-06c81067d565.png)
+    ![9](../assets/Resource%20Creation%20%26%20Application%20Deployment/9.png)
 
 4. Issue the command below to run the Bridge Framework automation pipeline docker image as container. After the execution, you will see an container ID returned in the terminal.
     
     - **docker container run -e BTPSA_VERSION_GIT="\$(git describe --long --tags  --always)" --rm  -it -d --name bridge-automation-pipeline bridge-automation-pipeline** 
 
-    ![Capture](https://user-images.githubusercontent.com/29527722/208529877-d69c415d-5477-4e54-9807-8b1fe891ee35.PNG)
+    ![10](../assets/Resource%20Creation%20%26%20Application%20Deployment/10.png)
     
 ## 3. Update the Bridge Framework Automation Pipeline Configuration Files
 
@@ -75,12 +75,12 @@ In this section, we will focus on using the Bridge Framework automation pipeline
     > - **Dev Containers**
     > - **Remote Development**
     
-    ![tempsnip](https://user-images.githubusercontent.com/29527722/208532399-6645cd4e-24c0-416e-87cc-f2cb89bd70b4.png)
-    ![tempsnip](https://user-images.githubusercontent.com/29527722/208533691-8f1463a5-65ca-4ca8-acfc-cf9a4ae4391a.png)
+    ![11](../assets/Resource%20Creation%20%26%20Application%20Deployment/11.png)
+    ![12](../assets/Resource%20Creation%20%26%20Application%20Deployment/12.png)
 
 2. Select the running container **bridge-automation-pipeline** in the drop down menu.
     
-    ![Capture](https://user-images.githubusercontent.com/29527722/208536304-2b7c50c3-aee5-4217-819f-5358e10bb0e0.PNG)
+    ![13](../assets/Resource%20Creation%20%26%20Application%20Deployment/13.png)
     
 3. We should inside of the bridge framework automation tool container which is up-and-running in our local machine. Lets update the configuration file of the container so that it could help us create the resource on SAP BTP and Microsof Azure, and deploy the extension application in SAP BTP.
 
@@ -90,17 +90,17 @@ In this section, we will focus on using the Bridge Framework automation pipeline
     -  **frontend**
     -  **notification**
     
-    ![tempsnip](https://user-images.githubusercontent.com/29527722/208549375-3a3fcb46-7df9-48b8-aefb-455bad300835.png)
+    ![14](../assets/Resource%20Creation%20%26%20Application%20Deployment/14.png)
     
 5. **Open** the **notificationConfig.json** file under the directory **btp-bridge-framework -> config -> public -> notification**. At line No.12 update the **s4hana-onprem-internal-host-ip**:**port** to your **SAP S/4HANA On-Premise System external server ip** and **port number**. Save the changes.
 
-    ![tempsnip](https://github.wdf.sap.corp/storage/user/105079/files/a5eaacb5-b3f4-460e-901e-e413cc68be8d)
+    ![15](../assets/Resource%20Creation%20%26%20Application%20Deployment/15.png)
     
 6. Open the **default.json** file under the directory **usecases -> released -> default.json**. This files contains the information which the Bridge Framework automation pipeline will used to configure the SAP BTP Service instances needed by the Bridge Framework. We needs to **update some configurations** for the **SAP BTP Destination service instance**, and the **SAP Event Mesh service instance**.
     
     - For the **SAP BTP Destination service instance configuration**, **updates** the **http://s4hanaonprem:44300** at **line No.53** to the **virtual host name** and **virtual host port** you defined in the SAP S/4HANA Cloud Connector. You could find your SAP S/4HANA Cloud Connector virtual host and virtual port information on the SAP BTP subacounnt. 
        
-       ![tempsnip](https://github.wdf.sap.corp/storage/user/105079/files/a9e349aa-86a2-46a4-9ce6-56d8ee72d7b2)
+       ![16](../assets/Resource%20Creation%20%26%20Application%20Deployment/16.png)
        
     - For the **SAP BTP Event Mesh service instance configuration**:
       
@@ -132,7 +132,7 @@ In this section, we will focus on using the Bridge Framework automation pipeline
         - **cfspacename**: The space name we just created.
         - **myemail**: The email address you used to create the configured the SAP BTP Subaccount.
     
-        ![tempsnip](https://user-images.githubusercontent.com/29527722/208554531-d287d165-1706-40b0-98ad-b0a6387c0d39.png)
+        ![17](../assets/Resource%20Creation%20%26%20Application%20Deployment/17.png)
     
      - **Microsft Azure Subscription Section**
      
@@ -213,70 +213,52 @@ As we already provided the SAP BTP subaccount and Microsoft Azure metadata withi
 
 2. There will be a link shows up in the terminal and asks you to do the manual login. Copy this link and open it in a browser, and click **Yes, log in to SAP BTP** button in the pop-up page in the browser.
     
-    ![Capture](https://github.wdf.sap.corp/storage/user/105079/files/6a8d9848-3009-42b8-a6e6-0f02c82a2a40)
-    ![Capture1](https://github.wdf.sap.corp/storage/user/105079/files/2f2976ad-a9b8-4792-b423-4e5bb4a38479)
+    ![18](../assets/Resource%20Creation%20%26%20Application%20Deployment/18.png)
+    ![19](../assets/Resource%20Creation%20%26%20Application%20Deployment/19.png)
 
 3. After a while you will see there is a manual login request shows up in the terminal. This step is for Microsoft Azure Powershall authentication. Copy the authentication code and then open the URL in the browser to finish the manual Azure login.
     
-    ![Capture3](https://github.wdf.sap.corp/storage/user/105079/files/eefd62ac-7ded-422f-ae39-980c838fd787)
-    ![Capture4](https://github.wdf.sap.corp/storage/user/105079/files/3fa90320-7d5e-4f75-9100-52dfc5703ef0)
-    ![Capture5](https://github.wdf.sap.corp/storage/user/105079/files/5714d678-736c-4d50-8b25-19cd409be29d)
+    ![20](../assets/Resource%20Creation%20%26%20Application%20Deployment/20.png)
+    ![21](../assets/Resource%20Creation%20%26%20Application%20Deployment/21.png)
+    ![22](../assets/Resource%20Creation%20%26%20Application%20Deployment/22.png)
 
 4. Then you will see another manual login request shows up in the terminal. This step is for Microsoft Azure CLI authentication. Copy the newly generated authentication code and URL into the browser, and finish the second time manual Azure login.
     
-    ![Capture7](https://github.wdf.sap.corp/storage/user/105079/files/671bd6a6-3c41-4cbf-ae93-f0e5bc126dee)
-    ![Capture8](https://github.wdf.sap.corp/storage/user/105079/files/461effd9-2dd2-4ef8-89b1-2393cb02526f)
-    ![Capture9](https://github.wdf.sap.corp/storage/user/105079/files/c3b369ac-f8b0-4e0e-9243-b2d8c5cf362b)
+    ![23](../assets/Resource%20Creation%20%26%20Application%20Deployment/23.png)
+    ![24](../assets/Resource%20Creation%20%26%20Application%20Deployment/24.png)
+    ![25](../assets/Resource%20Creation%20%26%20Application%20Deployment/25.png)
     
 5. After a while you will see the Microsoft Graph PowerShell login request. Copy the newly generated authentication code and URL into the browser, and finish the third time manual Azure login.
     
-    ![Capture11](https://github.wdf.sap.corp/storage/user/105079/files/6f4d8c2a-cc62-44da-90a2-131d2ac91c4f)
-    ![Capture12](https://github.wdf.sap.corp/storage/user/105079/files/12739647-724d-4f08-9f22-e8b2dadb0c5d)
-    ![Capture13](https://github.wdf.sap.corp/storage/user/105079/files/180fe302-126c-4ce6-a96c-a5f51b0a86e5)
+    ![26](../assets/Resource%20Creation%20%26%20Application%20Deployment/26.png)
+    ![27](../assets/Resource%20Creation%20%26%20Application%20Deployment/27.png)
+    ![28](../assets/Resource%20Creation%20%26%20Application%20Deployment/28.png)
 
 6. Once the Microsoft Azure resource creation is done, the SAP BTP service instances creation and extension application deployment on SAP BTP side will begin. You will be ask to obtain an temporary authentication code by using the URL shows up in the terminal, and copy the code back to the terminal.
     
-    ![Capture15](https://github.wdf.sap.corp/storage/user/105079/files/9dffcde8-cb07-426e-a83a-b6ebf1dab0f8)
-    ![Capture16](https://github.wdf.sap.corp/storage/user/105079/files/f2c2f3d7-bf5a-4816-8427-fe3d533b18a9) 
+    ![29](../assets/Resource%20Creation%20%26%20Application%20Deployment/29.png)
+    ![30](../assets/Resource%20Creation%20%26%20Application%20Deployment/30.png) 
     
 7. Since the CF CLI will not hold your login credentials for a long time, so you will be asked again to provide your SAP BTP credentials like what we did in step 6 for several times. **Please keep an eye on the terminal and process it timely**. 
     
     - Bridge Framework Automation Pipeline actions which needs to perform manual BTP login:
         - Creating env in BTP
         
-            ![Capture17](https://github.wdf.sap.corp/storage/user/105079/files/74d9ebdb-842e-4cb1-8c31-848402520d3f)
+            ![31](../assets/Resource%20Creation%20%26%20Application%20Deployment/31.png)
             
         - Pushing applications to BTP account
         
-            ![Capture19](https://github.wdf.sap.corp/storage/user/105079/files/a7338362-97f5-4ce7-8872-3cf350e4dfe5)
+            ![32](../assets/Resource%20Creation%20%26%20Application%20Deployment/32.png)
             
         - Getting key credentials
         
-            ![Capture21](https://github.wdf.sap.corp/storage/user/105079/files/a36f9697-358b-4d5d-b4a3-64e4d2e0f50d)
+            ![33](../assets/Resource%20Creation%20%26%20Application%20Deployment/33.png)
        
 8. After a while in the terminal you will see a text as **COMMAND EXECUTION: Uploading teams app package to MS Teams**. In this step the automation pipeline will upload the Microsoft Teams extension application to the Microsoft Teams automatically. This step requires login to the Microsoft Teams Cmdlet manually. Copy the authentication code and then open the URL in the browser to finish this step.
 
-    ![Capture23](https://github.wdf.sap.corp/storage/user/105079/files/36b1bd47-42b2-4ebe-ad29-2a98cf3de564)
+    ![34](../assets/Resource%20Creation%20%26%20Application%20Deployment/34.png)
     
 
 9. Finally in your terminal you will see **SUCCESSFULLY FINISHED USE CASE EXECUTION**. This mean that all the resources creation and extension application deployment has been done successfully.  
 
-    ![Capture24](https://github.wdf.sap.corp/storage/user/105079/files/83a392a3-de22-4cd7-a580-36bfd7a9b28f)
-    
-## 5. Potential Error Fixing (Optional)
-
-Sometimes the API Permission grantaion on the Microsoft Azure app registration created by the Bridge Framework automation pipeline will failed out, and it will cause the issue that this app registration doesn't have the permission to query user information from SAP Graph service. Let's double check and manual fixing this issue if it presents.
-
-1. Go back to the Microsoft Azure Portal, find the app registration with the name you give in parameters.json file line No.25. 
-   
-   ![tempsnip](https://github.wdf.sap.corp/storage/user/105079/files/3ccc58e3-b268-4cf3-91c7-85709c96601f)
-   
-   ![tempsnip](https://github.wdf.sap.corp/storage/user/105079/files/3c8a2fe2-619f-467f-9f03-cfd438c2a678)
-
-2. Click the **API permissions** button on the left panel. Double check whether all the Microsoft Graph API permissions has the **green checkmark** under the **Status** column.
-   
-   ![tempsnip](https://github.wdf.sap.corp/storage/user/105079/files/c78b37c3-e4b7-4407-86da-a3864831f6ae)
-
-3. If not, then please click the **Grant admin consent for ticoo** button to manually grant Microsoft Graph API permissions to the app registration.
-   
-   ![tempsnip](https://github.wdf.sap.corp/storage/user/105079/files/b90969bc-0e95-4032-a6b9-c4eb0d21e28c)
+    ![35](../assets/Resource%20Creation%20%26%20Application%20Deployment/35.png)
