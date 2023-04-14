@@ -8,39 +8,39 @@ The SAP S/4HANA extension application will be generated automatically after the 
 
 2.  **Expand btp-bridge-framework -> teams-app-package folder**, and **download** the **teams-app.zip** file to your local machine. This is the extension application that we will install in the Microsoft Teams app.
     
-    ![tempsnip](https://user-images.githubusercontent.com/29527722/210104395-ec9896d0-d53c-4de5-99ff-5f4977794312.png)
+    ![1](../assets/Install%20Extension%20in%20MS%20Teams/1.png)
     
 3. **Open** the **manifest.json** file in the **teams-app.zip** you just downloaded. **Updates** the **isNotificationOnly** value to **false**. Save the changes. 
     
-    ![Capture](https://github.wdf.sap.corp/storage/user/105079/files/6c36d2db-144a-4ac7-afe6-62383f1d441c)
+    ![2](../assets/Install%20Extension%20in%20MS%20Teams/2.png)
     
-    ![tempsnip](https://github.wdf.sap.corp/storage/user/105079/files/f0676bdd-d431-4d19-abb2-f0f18ff2fcf8)
+    ![3](../assets/Install%20Extension%20in%20MS%20Teams/3.png)
     
-    ![tempsnip](https://github.wdf.sap.corp/storage/user/105079/files/744724db-5650-419f-94e5-99bd8a5de155)
+    ![4](../assets/Install%20Extension%20in%20MS%20Teams/4.png)
 
 ## 2. Install the Extension Application in Microsoft Teams
 
 1. Login to the Microsoft Teams app. Click **Apps icon** on the left menu bar.
     
-    ![tempsnip](https://user-images.githubusercontent.com/29527722/210106988-0fc1ceab-131d-48e8-ae75-af96d4de09cc.png)
+    ![5](../assets/Install%20Extension%20in%20MS%20Teams/5.png)
 
 2.  Click **Manage your apps** button and then click the **Upload an app** icon.
     
-    ![tempsnip](https://user-images.githubusercontent.com/29527722/210107078-4da7cabf-3754-43b9-9c8c-4a49601cff9b.png)
+    ![6](../assets/Install%20Extension%20in%20MS%20Teams/6.png)
 
 3. Select **Upload a custom app**
     
-    ![Capture](https://user-images.githubusercontent.com/29527722/210107141-e9f03a21-de88-446b-bd69-67c43db28a2f.PNG)
+    ![7](../assets/Install%20Extension%20in%20MS%20Teams/7.png)
 
 4. Select the **teams-app.zip** we just downloaded and then click **Add** button.
     
-    ![Capture](https://user-images.githubusercontent.com/29527722/210107201-9886db35-5527-465a-a180-4cb6d5e7c465.PNG)
+    ![8](../assets/Install%20Extension%20in%20MS%20Teams/8.png)
 
-    ![Capture](https://user-images.githubusercontent.com/29527722/210107234-37733665-d153-4753-b490-323995fa79d0.PNG)
+    ![9](../assets/Install%20Extension%20in%20MS%20Teams/9.png)
     
 5. After the installation you should see there is an welcome card shows up automatically and we are all set for the extension application installation.
     
-    ![Capture](https://user-images.githubusercontent.com/29527722/210107380-4679c787-f0b3-4e36-b687-f22f9aa41725.PNG)
+    ![10](../assets/Install%20Extension%20in%20MS%20Teams/10.png)
 
 ## 3. SAP S/4HANA Extensiopn Application Validation
 
@@ -48,14 +48,14 @@ Lets do a quick validation on this extension application before we goes to the n
 
 1. Click **...** button on the bottom and then click the Bridge Framework icon
     
-    ![tempsnip](https://user-images.githubusercontent.com/29527722/210107744-bad56829-2b71-43ea-8bfd-5cefa9c830d0.png)
+    ![11](../assets/Install%20Extension%20in%20MS%20Teams/11.png)
 
 2. Select Purchase Orders box.
     
-    ![Capture](https://user-images.githubusercontent.com/29527722/210107806-0cd55d4d-1f44-4ce9-a016-8101765ea5cc.PNG)
+    ![12](../assets/Install%20Extension%20in%20MS%20Teams/12.png)
 
 3. Then we should see a table shows up and contains 400 purchase orders, this means that everything is working as desire. We are all set now.
     
-    ![Capture](https://user-images.githubusercontent.com/29527722/210107953-24ac37d1-dc14-48c9-81e7-925fe75d71a3.PNG)
+    ![13](../assets/Install%20Extension%20in%20MS%20Teams/13.png)
 
     
