@@ -27,7 +27,7 @@ In this section we will configure an RFC Destination and point to the SAP BTP Ev
     
     ![4](../assets/Configure%20S4HANA%20OnPrem/4.png)
 
-3. Go to the **Technical Settings** tab. In the **Technical Settings** section, give the value of **Host** as the value of **uri** we obtained [section 1](https://github.tools.sap/btp-use-case-factory/s4-hana-purchase-order-approval-in-ms-teams/blob/mission/Schedule%20SAP%20S4HANA%20ABAP%20Job/README.md#1-obtain-the-sap-event-mesh-oauth-client-credentials--message-queue-rest-endpoint) step 2 (**without the https://**). Enter **443** as the value of port. 
+3. Go to the **Technical Settings** tab. In the **Technical Settings** section, give the value of **Host** as the value of **uri** we obtained [section 1](https://github.com/SAP-samples/s4hana-microsoft-team-app-integration/tree/mission/Schedule%20SAP%20S4HANA%20ABAP%20Job#1-obtain-the-sap-event-mesh-oauth-client-credentials--message-queue-rest-endpoint) step 2 (**without the https://**). Enter **443** as the value of port. 
 
     ![5](../assets/Configure%20S4HANA%20OnPrem/5.png)
     
@@ -57,15 +57,15 @@ In this section we will configure the OAuth Client and OAuth Profile in the SAP 
     
     - OAuth 2.0 Client Profile: /IWXBE/MGW_MQTT
     - Configuration Name:       Meaningful name
-    - Oauth 2.0 Client ID:      **clientid** we obtained from [section 1](https://github.tools.sap/btp-use-case-factory/s4-hana-purchase-order-approval-in-ms-teams/blob/mission/Schedule%20SAP%20S4HANA%20ABAP%20Job/README.md#1-obtain-the-sap-event-mesh-oauth-client-credentials--message-queue-rest-endpoint) step 2. 
+    - Oauth 2.0 Client ID:      **clientid** we obtained from [section 1](https://github.com/SAP-samples/s4hana-microsoft-team-app-integration/tree/mission/Schedule%20SAP%20S4HANA%20ABAP%20Job#1-obtain-the-sap-event-mesh-oauth-client-credentials--message-queue-rest-endpoint) step 2. 
     
     ![10](../assets/Configure%20S4HANA%20OnPrem/10.png)
 
 3. Scroll down to the **Details** tab. Follow the instruction below to complet the setup.
 
-    - **Client Secret**: **clientsecret** we obtained from [section 1](https://github.tools.sap/btp-use-case-factory/s4-hana-purchase-order-approval-in-ms-teams/blob/mission/Schedule%20SAP%20S4HANA%20ABAP%20Job/README.md#1-obtain-the-sap-event-mesh-oauth-client-credentials--message-queue-rest-endpoint) step 2.
-    - **Authorization Endpoint**: **tokenendpoint** we obtained from [section 1](https://github.tools.sap/btp-use-case-factory/s4-hana-purchase-order-approval-in-ms-teams/blob/mission/Schedule%20SAP%20S4HANA%20ABAP%20Job/README.md#1-obtain-the-sap-event-mesh-oauth-client-credentials--message-queue-rest-endpoint) step 2. **Replace /token to /authorize** 
-    - **Token Endpoint**: **tokenendpoint** we obtained from [section 1](https://github.tools.sap/btp-use-case-factory/s4-hana-purchase-order-approval-in-ms-teams/blob/mission/Schedule%20SAP%20S4HANA%20ABAP%20Job/README.md#1-obtain-the-sap-event-mesh-oauth-client-credentials--message-queue-rest-endpoint) step 2.
+    - **Client Secret**: **clientsecret** we obtained from [section 1](https://github.com/SAP-samples/s4hana-microsoft-team-app-integration/tree/mission/Schedule%20SAP%20S4HANA%20ABAP%20Job#1-obtain-the-sap-event-mesh-oauth-client-credentials--message-queue-rest-endpoint) step 2.
+    - **Authorization Endpoint**: **tokenendpoint** we obtained from [section 1](https://github.com/SAP-samples/s4hana-microsoft-team-app-integration/tree/mission/Schedule%20SAP%20S4HANA%20ABAP%20Job#1-obtain-the-sap-event-mesh-oauth-client-credentials--message-queue-rest-endpoint) step 2. **Replace /token to /authorize** 
+    - **Token Endpoint**: **tokenendpoint** we obtained from [section 1](https://github.com/SAP-samples/s4hana-microsoft-team-app-integration/tree/mission/Schedule%20SAP%20S4HANA%20ABAP%20Job#1-obtain-the-sap-event-mesh-oauth-client-credentials--message-queue-rest-endpoint) step 2.
     - Scroll down to the **Access Settings** section and check the **Form Fields**, **Header Field** and **Client Credentials** option.
     
     ![11](../assets/Configure%20S4HANA%20OnPrem/11.png)
@@ -93,7 +93,7 @@ In this section, we will focus on import & schedule the SAP S/4HANA ABAP backgro
 3. In the **New Online Repository** page, please follow the instruction below to fill-out the form. Then click **Create Online Repo** button once done.
     
     > - **Git Repository URL**: 
-    > - **Package**: Please follow [this instruction](https://github.tools.sap/btp-use-case-factory/s4-hana-purchase-order-approval-in-ms-teams/blob/mission/Schedule%20SAP%20S4HANA%20ABAP%20Job/README2.md) to create a new package.
+    > - **Package**: Please follow [this instruction](https://github.com/SAP-samples/s4hana-microsoft-team-app-integration/blob/mission/Schedule%20SAP%20S4HANA%20ABAP%20Job/README2.md) to create a new package.
     > - **Branch**: s4h-abap
     > - **Display Name**: any ready friendly name
     
@@ -120,9 +120,9 @@ After you clone the ABAP backgroud job source code from the GitHub repo, we have
     
     ![21](../assets/Configure%20S4HANA%20OnPrem/21.png)
     
-    - **dest_name**: Change to the name of RFC destination we created in the step [2.2](https://github.tools.sap/btp-use-case-factory/s4-hana-purchase-order-approval-in-ms-teams/blob/mission/Schedule%20SAP%20S4HANA%20ABAP%20Job/README.md#2-configure-an-rfc-destination-in-sap-s4hana-on-premises-system)
-    - **auth_profile**: Change to the name of OAuth profile we created in the step [3.2](https://github.tools.sap/btp-use-case-factory/s4-hana-purchase-order-approval-in-ms-teams/blob/mission/Schedule%20SAP%20S4HANA%20ABAP%20Job/README.md#3-configure-the-oauth-client--oauth-profile-in-the-sap-s4hana-on-premises-system)
-    - **auth_conf**: Change to the name of OAuth Configuration we created in the step [3.2](https://github.tools.sap/btp-use-case-factory/s4-hana-purchase-order-approval-in-ms-teams/blob/mission/Schedule%20SAP%20S4HANA%20ABAP%20Job/README.md#3-configure-the-oauth-client--oauth-profile-in-the-sap-s4hana-on-premises-system)
+    - **dest_name**: Change to the name of RFC destination we created in the step [2.2](https://github.com/SAP-samples/s4hana-microsoft-team-app-integration/tree/mission/Schedule%20SAP%20S4HANA%20ABAP%20Job#2-configure-an-rfc-destination-in-sap-s4hana-on-premises-system)
+    - **auth_profile**: Change to the name of OAuth profile we created in the step [3.2](https://github.com/SAP-samples/s4hana-microsoft-team-app-integration/tree/mission/Schedule%20SAP%20S4HANA%20ABAP%20Job#3-configure-the-oauth-client--oauth-profile-in-the-sap-s4hana-on-premises-system)
+    - **auth_conf**: Change to the name of OAuth Configuration we created in the step [3.2](https://github.com/SAP-samples/s4hana-microsoft-team-app-integration/tree/mission/Schedule%20SAP%20S4HANA%20ABAP%20Job#3-configure-the-oauth-client--oauth-profile-in-the-sap-s4hana-on-premises-system)
     
     ![22](../assets/Configure%20S4HANA%20OnPrem/22.png)
 
@@ -135,7 +135,7 @@ After you clone the ABAP backgroud job source code from the GitHub repo, we have
     ![24](../assets/Configure%20S4HANA%20OnPrem/24.png)
     ![25](../assets/Configure%20S4HANA%20OnPrem/25.png)
 
-6. Scroll down to the line 51, **replace message queue name sap%2Fem%2Fs4%2Fpurchase-order** to the value of **additionalAutomationConfiguration.queueCreation.queue_name** you give in this [step section 3.7](https://github.tools.sap/btp-use-case-factory/s4-hana-purchase-order-approval-in-ms-teams/blob/mission/Resource%20Creation%20%26%20Application%20Deployment/README.md#3-update-the-bridge-framework-automation-pipeline-configuration-files).
+6. Scroll down to the line 51, **replace message queue name sap%2Fem%2Fs4%2Fpurchase-order** to the value of **additionalAutomationConfiguration.queueCreation.queue_name** you give in this [step section 3.7](https://github.com/SAP-samples/s4hana-microsoft-team-app-integration/tree/mission/Resource%20Creation%20%26%20Application%20Deployment#3-update-the-bridge-framework-automation-pipeline-configuration-files).
     
     > - Note
     > - The value of message queue name you give in here should be the **encoded full-qulified** name. For example is the queue name is **sap/em/s4/purchase-order**, then the value you should give here is **sap%2Fem%2Fs4%2Fpurchase-order**.
