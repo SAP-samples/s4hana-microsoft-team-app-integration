@@ -1,3 +1,6 @@
+
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/s4hana-microsoft-team-app-integration)](https://api.reuse.software/info/github.com/SAP-samples/s4hana-microsoft-team-app-integration)
+
 # Approve SAP S/4HANA Purchase Order in Microsoft Teams App
 In this project, we would like to demonstrate how to integrate the SAP S/4HANA with the Microsoft Teams App, so that the user could perform the SAP S/4HANA purchase order approval in the Microsoft Teams App.
 
