@@ -38,14 +38,11 @@ In this section, we will focus on using the Bridge Framework automation pipeline
 
 ## 2. Download the Automation Tool Docker Image
 
-1. Download the automation tool docker image **bridge-automation-pipeline.tar.gz**. Please **double check your local machine operation system**, and download the proper docker image by using the link below
+1. Download the automation tool docker image **bridge-automation-pipeline.tar.gz**. Please **double check your SAP BTP Account Type**, and download the proper docker image by using the link below
     
-    - For **MacOS** users
-      - MacOs with **Intel Chip** 
-        - [Bridge Framework Automation Pipeline Docker Image](https://github.com/SAP-samples/s4hana-microsoft-team-app-integration/releases/tag/v1.0.0-alpha)
-      - MacOs with **M1 Chip**
-        - [Bridge Framework Automation Pipeline Docker Image](https://github.com/SAP-samples/s4hana-microsoft-team-app-integration/releases/tag/v1.0.0-beta)
-    - For **WindowsOS** users
+    - For **SAP BTP Trial Account** users
+      - [Bridge Framework Automation Pipeline Docker Image](https://github.com/SAP-samples/s4hana-microsoft-team-app-integration/releases/tag/v1.0.0-beta)
+    - For **SAP BTP Regular Account** users
       - [Bridge Framework Automation Pipeline Docker Image](https://github.com/SAP-samples/s4hana-microsoft-team-app-integration/releases/tag/v1.0.0-alpha)
     
 2. Open the CMD tool in your local machine, go into the directory where the downloaded Bridge Framework automation pipeline docker image stored.
