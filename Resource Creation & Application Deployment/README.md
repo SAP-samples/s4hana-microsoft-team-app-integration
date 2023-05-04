@@ -116,7 +116,7 @@ In this section, we will focus on using the Bridge Framework automation pipeline
     
       - **SAP BTP Global Account and Subaccount Section**
         
-        From line No.4 to line No.14 is the place to give your SAP BTP Global Account and Subaccount Account information. The Bridge Framework automation pipeline could get access to your SAP BTP subaccount, and then create the SAP BTP service instances needed by the Bridge Framework. These variable's value you could obtain from your SAP BTP subaccount Overview page.
+        From line No.4 to line No.13 is the place to give your SAP BTP Global Account and Subaccount Account information. The Bridge Framework automation pipeline could get access to your SAP BTP subaccount, and then create the SAP BTP service instances needed by the Bridge Framework. These variable's value you could obtain from your SAP BTP subaccount Overview page.
       
         - **region**: the SAP BTP Subaccount region.
         - **globalaccount** : the SAP BTP global account name.
@@ -133,7 +133,7 @@ In this section, we will focus on using the Bridge Framework automation pipeline
     
      - **Microsft Azure Subscription Section**
      
-       From the line No.16 to line No.42 is the place for you to configure the resource needed by the Bridge Framework on your Microsoft Azure subscription.
+       From the line No.16 to line No.44 is the place for you to configure the resource needed by the Bridge Framework on your Microsoft Azure subscription.
        
          - **azureResources.tags**  (Line No.20 - No.23)
            
@@ -163,33 +163,34 @@ In this section, we will focus on using the Bridge Framework automation pipeline
                
              - **azureResources.botService.connectionNamePrefix**: any meaningful, ready freiendly name you would like to use.
 
-        - **azureResources.blobStorage** (Line No.35 - No.38)
+        - **azureResources.blobStorage** (Line No.35 - No.39)
         
           This section is used to configure the Blob Storage Service on Microsoft Azure. The Bridge Framework automation pipeline will use it to create the Blob Storage Account and Blob Storage Container with the name you given here.
           
           - **azureResources.blobStorage.blobStorageContainerName**: any meaningful, ready freiendly name you would like to use. The Bridge Framework will create the Azure Blob Storage container with the name you give here. **Please give the name all in lower-cases, and no logoner than 25 characters**.
           - **azureResources.blobStorage.blobStorageAccountName**: any meaningful, ready freiendly name you would like to use. The Bridge Framework will create the Azure Blob Storage account with the name you give here. **Please give the name all in lower-cases, and no logoner than 25 characters**.
           
-        - **azureResources.enterpriseApp** (Line No.39 - No.41)
+        - **azureResources.enterpriseApp** (Line No.40 - No.43)
         
-          This section is used to grant Microsoft Teams extension application's user access to the Enterprise Application we manually configured in this [prevsiou step](https://github.wdf.sap.corp/SCE/sap-mission-s4-hana-purchase-order-approval/blob/mission/Principle-Propagation-Microsoft-Azure-SAP-BTP/README.md).
+          This section is used to grant Microsoft Teams extension application's user access to the Azure Enterprise Application.
           
           - **azureResources.enterpriseApp.emails**:
             
             1. Add purchase order creator, purchase order approver's email address into this email array.
 
+          - **azureResources.enterpriseApp.notificationEmail**:
+            
+            1. Add an email address that you would like to receive the notification of the system status, as this email will receive a notification when the active certificate is near the expiration date.
+
      - **Additional Automation Configuration Section**
      
-       From the line No.43 to line No.58 is the place for you to configure the additional resources needed by the Bridge Framework on your SAP BTP subaccount.
+       From the line No.45 to line No.60 is the place for you to configure the additional resources needed by the Bridge Framework on your SAP BTP subaccount.
        
-       - **additionalAutomationConfiguration.queueCreation** (Line No.49 - No.53)
+       - **additionalAutomationConfiguration.queueCreation** (Line No.51 - No.54)
          
          This section is used to configure the Message Queue and the Webhook Subscription of the SAP Event Mesh Services. The Message Queueu will receive the purchase order & workflow instance data sending from SAP S/4HANA On-Premise system, and the Webhook subscription will be forwarding the message from message queue to the bridge framework backend service whish is hosted in your SAP BTP Subaccount.
          
          - **additionalAutomationConfiguration.queueCreation.subscription_name**: any meaningful, read freiendly name. The Bridge Framework automation pipeline will create the Webhook subscription on the message queue with the name you give here.
-         - **additionalAutomationConfiguration.queueCreation.endpoint**:
-           
-           1. Change the us10 at line No.51 to the value of cfcliapihostregion you gave at line No.11 in this file.
            
          - **additionalAutomationConfiguration.queueCreation.queue_name**:
            
